@@ -1,4 +1,4 @@
-@use "sass:math"
+//@use "sass:math"
 // Подгружать переменные Брейкпооинтов из Variables
 @import "variables"
 
@@ -83,6 +83,7 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
 
 // Колонки
 @each $breakpoint, $width in $grid-breakpoints
+
   @if $breakpoint != "xs"
 
     @for $i from 1 through 12
@@ -91,51 +92,20 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
           display: block
           width:  100% * $i / 12
 
-          padding-left: (map-get($grid-gutters, #{$breakpoint}) / 2)
-          padding-right: (map-get($grid-gutters, #{$breakpoint}) / 2)
-
   @else // для классов .col-*
 
     @for $i from 1 through 12
       .col-#{$i}
         width: 100% * $i / 12
-        padding-left: (map-get($grid-gutters, #{$breakpoint}) / 2)
-        padding-right: (map-get($grid-gutters, #{$breakpoint}) / 2)
-        @media(min-width: $sm)
-          padding-left: (map-get($grid-gutters, "sm") / 2)
-          padding-right: (map-get($grid-gutters, "sm") / 2)
-        @media(min-width: $md)
-          padding-left: (map-get($grid-gutters, "md") / 2)
-          padding-right: (map-get($grid-gutters, "md") / 2)
-        @media(min-width: $lg)
-          padding-left: (map-get($grid-gutters, "lg") / 2)
-          padding-right: (map-get($grid-gutters, "lg") / 2)
-        @media(min-width: $xl)
-          padding-left: (map-get($grid-gutters, "xl") / 2)
-          padding-right: (map-get($grid-gutters, "xl") / 2)
-        @media(min-width: $xxl)
-          padding-left: (map-get($grid-gutters, "xxl") / 2)
-          padding-right: (map-get($grid-gutters, "xxl") / 2)
+
+@each $breakpoint, $width in $grid-breakpoints
+  [class^="col-"]
+    @media (min-width: #{$width})
+      padding-left: (map-get($grid-gutters, #{$breakpoint}) / 2)
+      padding-right: (map-get($grid-gutters, #{$breakpoint}) / 2)
 
 .col
   flex: 1 0 0
-  padding-left: (map-get($grid-gutters, "xs") / 2)
-  padding-right: (map-get($grid-gutters, "xs") / 2)
-  @media(min-width: $sm)
-    padding-left: (map-get($grid-gutters, "sm") / 2)
-    padding-right: (map-get($grid-gutters, "sm") / 2)
-  @media(min-width: $md)
-    padding-left: (map-get($grid-gutters, "md") / 2)
-    padding-right: (map-get($grid-gutters, "md") / 2)
-  @media(min-width: $lg)
-    padding-left: (map-get($grid-gutters, "lg") / 2)
-    padding-right: (map-get($grid-gutters, "lg") / 2)
-  @media(min-width: $xl)
-    padding-left: (map-get($grid-gutters, "xl") / 2)
-    padding-right: (map-get($grid-gutters, "xl") / 2)
-  @media(min-width: $xxl)
-    padding-left: (map-get($grid-gutters, "xxl") / 2)
-    padding-right: (map-get($grid-gutters, "xxl") / 2)
 
 [class*="col-"]
   display: block

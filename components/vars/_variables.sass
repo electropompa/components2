@@ -9,3 +9,13 @@ $xxl: 1500px
 // SHADOWS
 =shadow
   box-shadow: 0 9px 40px 0 transparentize($black, .95)
+
+// TRANSITIONS
+$transition: cubic-bezier(.35, 0, 0, 1.01)
+=transition( $property )
+  transition: $property .5s $transition
+
+// ОТСТУПЫ
+$spacer: 1rem !default
+$spacers: () !default
+$spacers: map-merge( ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .5), 3: $spacer, 4: ($spacer *  1.5), 5: ($spacer * 3)  ), $spacers )
