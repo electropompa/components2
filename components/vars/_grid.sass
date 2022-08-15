@@ -1,5 +1,5 @@
 //@use "sass:math"
-// Подгружать переменные Брейкпооинтов из Variables
+// Подгружать переменные Брейкпоинтов из Variables
 @import "variables"
 
 html
@@ -82,33 +82,30 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
 
 
 // Колонки
-@each $breakpoint, $width in $grid-breakpoints
+.col
+  flex: 1 0 0
+  @each $breakpoint, $width in $grid-breakpoints
 
-  @if $breakpoint != "xs"
+    @if $breakpoint != "xs"
 
-    @for $i from 1 through 12
-      .col-#{$breakpoint}-#{$i}
-        @media (min-width: #{$width})
-          display: block
-          width:  100% * $i / 12
+      @for $i from 1 through 12
+        &-#{$breakpoint}-#{$i}
+          @media (min-width: #{$width})
+            display: block
+            width:  100% * $i / 12
 
-  @else // для классов .col-*
+    @else // для классов .col-*
 
-    @for $i from 1 through 12
-      .col-#{$i}
-        width: 100% * $i / 12
+      @for $i from 1 through 12
+        &-#{$i}
+          width: 100% * $i / 12
 
-@each $breakpoint, $width in $grid-breakpoints
-  [class^="col-"]
+[class^="col-"]
+  display: block
+  @each $breakpoint, $width in $grid-breakpoints
     @media (min-width: #{$width})
       padding-left: (map-get($grid-gutters, #{$breakpoint}) / 2)
       padding-right: (map-get($grid-gutters, #{$breakpoint}) / 2)
-
-.col
-  flex: 1 0 0
-
-[class*="col-"]
-  display: block
 
 .no-gutters
   margin-right: 0
