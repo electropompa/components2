@@ -4,9 +4,9 @@
 
 =ff-headings
   font:
-    family: 'Inter', sans-serif
+    family: 'PT Serif', serif
     style: normal
-    weight: 600
+    weight: 500
 
 .uppercase
   text-transform: uppercase
@@ -21,7 +21,6 @@
   letter-spacing: 0.02em
   @media (min-width: $md)
     font-size: 16px
-    letter-spacing: 0.04em
   @media (min-width: $xl)
     font-size: 18px
 
@@ -325,9 +324,6 @@ h5, .h5
 h6, .h6
   +h6
 
-.nowrap
-  white-space: nowrap
-
 p
   margin-bottom: 1.4em
 
@@ -339,3 +335,32 @@ a
   color: $accent
   &:hover
     text-decoration: none
+
+ul, ol
+  margin-bottom: 1.5em
+
+ol
+  margin-left: 25px
+  li
+    margin-bottom: 1em
+    line-height: 140%
+    &::marker
+      color: $black
+
+ul.list-dots
+  padding-left: 20px
+  position: relative
+
+  li
+    +md-text-normal
+    margin-bottom: .5rem
+
+    &:before
+      content: ''
+      position: absolute
+      width: 6px
+      height: 6px
+      margin-top: .75rem
+      display: inline-block
+      left: 0
+      background: url("/img/icons/dots.svg") no-repeat

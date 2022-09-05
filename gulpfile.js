@@ -9,11 +9,11 @@ const { src, dest, parallel, series, watch } = require('gulp'),
 
 function styles(){
     return src( "components/vars/styles.sass")
-       // .pipe(sourcemaps.init())
+       .pipe(sourcemaps.init())
        .pipe(sass())
        .pipe(autoprefixer())
        // .pipe(cssnano())
-       // .pipe(sourcemaps.write())
+       .pipe(sourcemaps.write())
        .pipe(dest("components/"))
        .pipe(livereload())
 }

@@ -100,7 +100,8 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
         &-#{$i}
           width: 100% * $i / 12
 
-[class^="col-"]
+[class^="col-"],
+[class*="col-"]
   display: block
   @each $breakpoint, $width in $grid-breakpoints
     @media (min-width: #{$width})
