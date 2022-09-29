@@ -64,7 +64,6 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
       padding-left: calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
       padding-right: calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
 
-
 .row
   display: -ms-flexbox
   display: flex
@@ -80,7 +79,6 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
       margin-left: - calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
       margin-right: - calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
 
-
 // Колонки
 .col
   flex: 1 0 0
@@ -92,13 +90,13 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
         &-#{$breakpoint}-#{$i}
           @media (min-width: #{$width})
             display: block
-            width: calc( $i / 12) * 100
+            width: calc( $i * 100% / 12)
 
     @else // для классов .col-*
 
       @for $i from 1 through 12
         &-#{$i}
-          width: calc( $i / 12 ) * 100
+          width: calc( $i * 100% / 12)
 
 [class^="col-"],
 [class*="col-"]
@@ -124,10 +122,10 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
     @for $i from 1 through 11
       .offset-#{$breakpoint}-#{$i}
         @media (min-width: #{$width})
-          margin-left: calc($i / 12) * 100
+          margin-left: calc( $i * 100% / 12)
 
   @else
 
     @for $i from 1 through 11
       .offset-#{$i}
-        margin-left: calc($i / 12) * 100
+        margin-left: calc( $i * 100% / 12)
