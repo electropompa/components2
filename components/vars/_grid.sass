@@ -7,7 +7,7 @@ html
   -ms-overflow-style: scrollbar
 
 *,
-*::before,
+*::before, 
 *::after
   box-sizing: inherit
 
@@ -57,12 +57,12 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
     @if $breakpoint != "xs"
       @media ( min-width: #{$width} )
         max-width: map-get($container-max-widths, #{$breakpoint})
-        padding-left: ( map-get($grid-gutters, #{$breakpoint}) / 2 )
-        padding-right: ( map-get($grid-gutters, #{$breakpoint}) / 2 )
+        padding-left: calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
+        padding-right: calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
     @else
       max-width: map-get($container-max-widths, #{$breakpoint})
-      padding-left: ( map-get($grid-gutters, #{$breakpoint}) / 2 )
-      padding-right: ( map-get($grid-gutters, #{$breakpoint}) / 2 )
+      padding-left: calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
+      padding-right: calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
 
 
 .row
@@ -74,11 +74,11 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
   @each $breakpoint, $width in $grid-breakpoints
     @if $breakpoint != "xs"
       @media ( min-width: #{$width} )
-        margin-left: (- map-get($grid-gutters, #{$breakpoint}) / 2 )
-        margin-right: (- map-get($grid-gutters, #{$breakpoint}) / 2 )
+        margin-left: - calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
+        margin-right: - calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
     @else
-      margin-left: (- map-get($grid-gutters, #{$breakpoint}) / 2 )
-      margin-right: (- map-get($grid-gutters, #{$breakpoint}) / 2 )
+      margin-left: - calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
+      margin-right: - calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
 
 
 // Колонки
@@ -92,21 +92,21 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
         &-#{$breakpoint}-#{$i}
           @media (min-width: #{$width})
             display: block
-            width:  100% * $i / 12
+            width: calc( $i / 12) * 100
 
     @else // для классов .col-*
 
       @for $i from 1 through 12
         &-#{$i}
-          width: 100% * $i / 12
+          width: calc( $i / 12 ) * 100
 
 [class^="col-"],
 [class*="col-"]
   display: block
   @each $breakpoint, $width in $grid-breakpoints
     @media (min-width: #{$width})
-      padding-left: (map-get($grid-gutters, #{$breakpoint}) / 2)
-      padding-right: (map-get($grid-gutters, #{$breakpoint}) / 2)
+      padding-left: calc(map-get($grid-gutters, #{$breakpoint}) / 2)
+      padding-right: calc(map-get($grid-gutters, #{$breakpoint}) / 2)
 
 .no-gutters
   margin-right: 0
@@ -124,10 +124,10 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
     @for $i from 1 through 11
       .offset-#{$breakpoint}-#{$i}
         @media (min-width: #{$width})
-          margin-left: percentage($i / 12)
+          margin-left: calc($i / 12) * 100
 
   @else
 
     @for $i from 1 through 11
       .offset-#{$i}
-        margin-left: percentage($i / 12)
+        margin-left: calc($i / 12) * 100
