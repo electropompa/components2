@@ -5,6 +5,7 @@
 // 3. DISPLAY UTILITIES
 // 4. VUE ANIMATION CLASSES
 // 5. FLEXBOX ORDER CLASSES
+// 6. POSITION
 
 .white-bg-wrapper
   background: white
@@ -319,3 +320,18 @@ $orders: ("first": -1, "0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "last": 6
     width: calc(50% + #{map-get($grid-gutters, xl)})
   @media (min-width: $xxl)
     width: calc(50% + #{map-get($grid-gutters, xxl)})
+
+.position-static
+  position: static
+
+.position-relative
+  position: relative
+
+.position-absolute
+  position: absolute
+
+.position-fixed
+  position: fixed
+
+.position-sticky
+  position: sticky
