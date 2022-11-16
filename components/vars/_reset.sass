@@ -5,16 +5,17 @@
   &:focus
     outline: none
 
-img
-  max-width: 100%
-  line-height: 0
-
-input:focus, button:focus
-  outline: none
-
 =reset-list
   padding-left: 0
   list-style: none
+
+img
+  max-width: 100%
+  line-height: 0
+  height: auto
+
+input:focus, button:focus
+  outline: none
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -47,6 +48,12 @@ footer, header, hgroup, menu, nav, section
 body
   line-height: 1
 
+a
+  color: inherit
+  font-size: inherit
+  &:hover
+    text-decoration: none
+
 ul
   list-style: none
 
@@ -61,6 +68,9 @@ q:before, q:after
 table
   border-collapse: collapse
   border-spacing: 0
+
+label
+  cursor: pointer
 
 input
   background: transparent

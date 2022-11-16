@@ -15,19 +15,25 @@
 @import "../components/inputs"
 @import "../components/tables"
 
+html
+  scroll-behavior: smooth
+
 body
   padding-top: 50px
-  background: $gray-200
-  scroll-behavior: smooth
+  background: $gray-100
 
 h1, h2, h3, h4, h5, h6
   font:
-    family: 'PT Serif', serif
+    family: $heading-font
     weight: 400
-  color: $black
+  color: var(--black)
 
 p
   font:
-    family: 'IBM Plex Sans', sans-serif
+    family: $text-font
     weight: 400
-  color: $black
+  color: var(--black)
+
+@import "for-example-page"
+
+

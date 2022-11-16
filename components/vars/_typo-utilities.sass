@@ -1,14 +1,5 @@
 *, html, body, div, p, li
-  font-family: 'Inter', sans-serif
-
-a
-  color: inherit
-  font-size: inherit
-  &:hover
-    text-decoration: none
-
-label
-  cursor: pointer
+  font-family: $text-font
 
 .fw-bold
   font-weight: bold
@@ -22,6 +13,15 @@ small, .small
 
 .uppercase
   text-transform: uppercase
+
+.text-capitalize
+  text-transform: capitalize
+
+.text-lowercase
+  text-transform: lowercase
+
+.text-dark
+  color: var(--black) !important
 
 // TEXT-ALIGNMENT
 $alignment: ( "left", "right", "center" ) !default

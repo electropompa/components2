@@ -4,9 +4,14 @@
 
 =ff-headings
   font:
-    family: 'PT Serif', serif
+    family: $heading-font
     style: normal
-    weight: 500
+    weight: $medium-weight
+
+$light-weight: 200
+$normal-weight: 400
+$medium-weight: 500
+$bold-weight: 600
 
 // РАЗМЕРЫ ТЕКСТА
 
@@ -21,7 +26,7 @@
 
 =lg-text-light
   +lg-text-size
-  font-weight: 200
+  font-weight: $light-weight
   line-height: 170%
   @media (min-width: $xl)
     line-height: 160%
@@ -31,7 +36,7 @@
 
 =lg-text-normal
   +lg-text-size
-  font-weight: 400
+  font-weight: $normal-weight
   line-height: 130%
 
 .lg-text-normal
@@ -39,7 +44,7 @@
 
 =lg-text-medium
   +lg-text-size
-  font-weight: 500
+  font-weight: $medium-weight
   line-height: 130%
 
 .lg-text-medium
@@ -47,7 +52,7 @@
 
 =lg-text-bold
   +lg-text-size
-  font-weight: 600
+  font-weight: $bold-weight
   line-height: 130%
 
 .lg-text-bold
@@ -69,7 +74,7 @@
 
 =md-text-light
   +md-text-size
-  font-weight: 200
+  font-weight: $light-weight
   line-height: 150%
   letter-spacing: 0.04em
   @media (min-width: $xl)
@@ -80,7 +85,7 @@
 
 =md-text-normal
   +md-text-size
-  font-weight: 400
+  font-weight: $normal-weight
   line-height: 150%
   letter-spacing: 0.02em
 
@@ -89,7 +94,7 @@
 
 =md-text-medium
   +md-text-size
-  font-weight: 500
+  font-weight: $medium-weight
   line-height: 150%
   letter-spacing: 0.01em
 
@@ -98,7 +103,7 @@
 
 =md-text-bold
   +md-text-size
-  font-weight: 600
+  font-weight: $bold-weight
   line-height: 150%
   letter-spacing: 0.02em
   @media (min-width: $md)
@@ -126,7 +131,7 @@
 
 =sm-text-light
   +sm-text-size
-  font-weight: 200
+  font-weight: $light-weight
   line-height: 150%
   letter-spacing: 0.04em
   @media (min-width: $xl)
@@ -138,7 +143,7 @@
 
 =sm-text-normal
   +sm-text-size
-  font-weight: 400
+  font-weight: $normal-weight
   line-height: 150%
   letter-spacing: 0.02em
   @media (min-width: $xl)
@@ -149,7 +154,7 @@
 
 =sm-text-medium
   +sm-text-size
-  font-weight: 500
+  font-weight: $medium-weight
   line-height: 150%
   letter-spacing: 0.02em
   @media (min-width: $xl)
@@ -160,7 +165,7 @@
 
 =sm-text-bold
   +sm-text-size
-  font-weight: 600
+  font-weight: $bold-weight
   line-height: 150%
   letter-spacing: 0.02em
   @media (min-width: $xl)
@@ -190,7 +195,7 @@
 
 =xs-text-light
   +xs-text-size
-  font-weight: 200
+  font-weight: $light-weight
   line-height: 170%
   letter-spacing: 0.04em
 
@@ -199,7 +204,7 @@
 
 =xs-text-normal
   +xs-text-size
-  font-weight: 400
+  font-weight: $normal-weight
   line-height: 170%
   letter-spacing: 0.02em
   @media (min-width: $md)
@@ -212,7 +217,7 @@
 
 =xs-text-medium
   +xs-text-size
-  font-weight: 500
+  font-weight: $medium-weight
   line-height: 170%
   letter-spacing: 0.02em
   @media (min-width: $md)
@@ -225,7 +230,7 @@
 
 =xs-text-bold
   +xs-text-size
-  font-weight: 600
+  font-weight: $bold-weight
   line-height: 170%
   letter-spacing: 0.02em
   @media (min-width: $md)
@@ -322,15 +327,10 @@ h6, .h6
 p
   margin-bottom: 1.4em
 
-
 p, div
   +md-text-normal
 
-a
-  color: $accent
-  &:hover
-    text-decoration: none
-
+// СПИСКИ
 ul, ol
   margin-bottom: 1.5em
 
@@ -346,7 +346,7 @@ ul.list-dots
   padding-left: 20px
   position: relative
 
-  li
+  & > li
     +md-text-normal
     margin-bottom: .5rem
 
@@ -358,4 +358,9 @@ ul.list-dots
       margin-top: .75rem
       display: inline-block
       left: 0
-      background: url("/img/icons/dots.svg") no-repeat
+      background: url("img/icons/dots.svg") no-repeat
+
+li > ol,
+li > ul
+  margin-top: .5em
+  margin-bottom: .5em
