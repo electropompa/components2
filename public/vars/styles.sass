@@ -1,0 +1,39 @@
+@import "reset"
+@import "variables"
+@import "../theme/theme-variables"
+@import "../theme/icons"
+@import "colors"
+@import "grid"
+@import "typography"
+@import "typo-utilities"
+@import "utilities"
+@import "../block-shift/block-img-shift"
+
+@import "../components/alerts"
+@import "../components/badges"
+@import "../components/buttons"
+@import "../components/inputs"
+@import "../components/tables"
+
+html
+  scroll-behavior: smooth
+
+body
+  padding-top: 50px
+  background: $gray-100
+
+h1, h2, h3, h4, h5, h6
+  font:
+    family: $heading-font
+    weight: 400
+  color: var(--black)
+
+p
+  font:
+    family: $text-font
+    weight: 400
+  color: var(--black)
+
+@import "for-example-page"
+
+

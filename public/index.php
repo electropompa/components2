@@ -374,6 +374,27 @@
       </ul>
     </div>
   </div>
+
+  <h3 class="my-5">Forms</h3>
+  <div class="row">
+    <div class="col-xl-3">
+      <label for="text-input" class="component__input__name__label">
+        Text input
+        <input id="text-input" type="text" placeholder="Введите текст">
+      </label>
+    </div>
+    <div class="col-xl-3">
+      <label for="email-input">
+        Email input
+        <input id="email-input"  type="email" placeholder="test@test.ru">
+      </label>
+    </div>
+    <div class="col-xl-4">
+
+    </div>
+  </div>
+
+
 </div>
 
 <h2 class="text-center my-5">Block Shift</h2>
