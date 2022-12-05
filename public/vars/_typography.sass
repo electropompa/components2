@@ -2,7 +2,7 @@
 // 2. TYPO SIZE - lg, md, sm, xs / normal, medium, bold, uppercase
 // 3. TYPOGRAPHY UTILITIES
 
-\:root
+\:root, html
   font-size: 10px
   @media(min-width: $xl)
     font-size: 12px
@@ -21,9 +21,9 @@ $bold-weight: 600
 // РАЗМЕРЫ ТЕКСТА
 // XS - EXTRA SMALL
 =xs-text-size
-  font-size: inherit
+  font-size: 1rem
   @media (min-width: $xl)
-    font-size: inherit
+    font-size: 1rem
 
 =xs-text-light
   +xs-text-size
@@ -277,7 +277,7 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6
   margin-top: .5rem
   margin-bottom: .75em
   @media (min-width: $xl)
-    font-size: 2.5em
+    font-size: 4.5rem
 h1, .h1
   +h1
 
@@ -286,7 +286,7 @@ h1, .h1
   font-size: calc(1.325rem + .9vw)
   letter-spacing: 0.015em
   @media (min-width: $xl)
-    font-size: 2rem
+    font-size: 3.5rem
     letter-spacing: -0.01em
 
 h2, .h2
@@ -297,7 +297,7 @@ h2, .h2
   font-size: calc(1.3rem + .6vw)
   letter-spacing: 0.01em
   @media (min-width: $xl)
-    font-size: 1.75rem
+    font-size: 2.75rem
     letter-spacing: -0.02em
 h3, .h3
   +h3
@@ -307,21 +307,21 @@ h3, .h3
   font-size: calc(1.275rem + .3vw)
   letter-spacing: 0.015em
   @media (min-width: $xl)
-    font-size: 1.5rem
+    font-size: 2.25rem
     letter-spacing: -0.01em
 h4, .h4
   +h4
 
 =h5
   +ff-headings
-  font-size: 1.25rem
+  font-size: 2rem
   letter-spacing: 0.015em
 h5, .h5
   +h5
 
 =h6
   +ff-headings
-  font-size: 1rem
+  font-size: 1.75rem
   letter-spacing: 0.015em
 
 h6, .h6

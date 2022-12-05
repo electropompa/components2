@@ -188,7 +188,7 @@
 
   <h2 id="typography" class="my-5">Typography</h2>
   <div class="row">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-7">
       <h1>Пример заголовока H1 <span class="badge bg-primary ">Badges</span></h1>
       <h2>Пример заголовока H2 <span class="badge bg-primary">Badges</span></h2>
       <h3>Пример заголовока H3 <span class="badge bg-primary">Badges</span></h3>
@@ -208,18 +208,18 @@
       <h3 class="my-4">xs-text-normal</h3>
       <p class="xs-text-normal"><b>Paragraph</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda atque, dignissimos earum harum itaque mollitia nesciunt nihil perspiciatis, saepe tempora temporibus. Autem consectetur, debitis dolore iste quisquam voluptatem. Aliquam dolore in molestiae temporibus. Hic modi non numquam! Ab atque deserunt dicta eaque eos harum inventore iure, maxime minima mollitia, obcaecati pariatur quae saepe sint suscipit totam ut veritatis.</p>
     </div>
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-5">
 
       <h3 id="badges" class="mb-3 text-center">Badges</h3>
 
-      <span class="badge bg-primary">Primary</span>
-      <span class="badge bg-secondary">Secondary</span>
-      <span class="badge bg-success">Success</span>
-      <span class="badge bg-danger">Danger</span>
-      <span class="badge bg-warning text-dark">Warning</span>
-      <span class="badge bg-info text-dark">Info</span>
-      <span class="badge bg-light text-dark">Light</span>
-      <span class="badge bg-dark">Dark</span>
+      <span class="badge mb-2 bg-primary">Primary</span>
+      <span class="badge mb-2 bg-secondary">Secondary</span>
+      <span class="badge mb-2 bg-success">Success</span>
+      <span class="badge mb-2 bg-danger">Danger</span>
+      <span class="badge mb-2 bg-warning text-dark">Warning</span>
+      <span class="badge mb-2 bg-info text-dark">Info</span>
+      <span class="badge mb-2 bg-light text-dark">Light</span>
+      <span class="badge mb-2 bg-dark">Dark</span>
 
       <p>Цвет меняется в _colors.sass</p>
 
