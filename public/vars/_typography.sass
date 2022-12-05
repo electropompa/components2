@@ -2,6 +2,11 @@
 // 2. TYPO SIZE - lg, md, sm, xs / normal, medium, bold, uppercase
 // 3. TYPOGRAPHY UTILITIES
 
+\:root
+  font-size: 10px
+  @media(min-width: $xl)
+    font-size: 12px
+
 =ff-headings
   font:
     family: $heading-font
@@ -14,6 +19,71 @@ $medium-weight: 500
 $bold-weight: 600
 
 // РАЗМЕРЫ ТЕКСТА
+// XS - EXTRA SMALL
+=xs-text-size
+  font-size: inherit
+  @media (min-width: $xl)
+    font-size: inherit
+
+=xs-text-light
+  +xs-text-size
+  font-weight: $light-weight
+  line-height: 170%
+  letter-spacing: 0.04em
+
+.xs-text-light
+  +xs-text-light
+
+=xs-text-normal
+  +xs-text-size
+  font-weight: $normal-weight
+  line-height: 170%
+  letter-spacing: 0.02em
+  @media (min-width: $md)
+    letter-spacing: 0.04em
+  @media (min-width: $xl)
+    line-height: 150%
+
+.xs-text-normal
+  +xs-text-normal
+
+=xs-text-medium
+  +xs-text-size
+  font-weight: $medium-weight
+  line-height: 170%
+  letter-spacing: 0.02em
+  @media (min-width: $md)
+    letter-spacing: 0.04em
+  @media (min-width: $xl)
+    line-height: 150%
+
+.xs-text-medium
+  +xs-text-medium
+
+=xs-text-bold
+  +xs-text-size
+  font-weight: $bold-weight
+  line-height: 170%
+  letter-spacing: 0.02em
+  @media (min-width: $md)
+    letter-spacing: 0.04em
+  @media (min-width: $xl)
+    line-height: 150%
+
+.xs-text-bold
+  +xs-text-bold
+
+=xs-text-uppercase
+  +xs-text-size
+  @extend .uppercase
+  line-height: 170%
+  letter-spacing: 0.02em
+  @media (min-width: $md)
+    letter-spacing: 0.04em
+
+.xs-text-uppercase
+  +xs-text-uppercase
+
 
 // LG - LARGE
 =lg-text-size
@@ -186,72 +256,6 @@ $bold-weight: 600
 
 .sm-text-uppercase
   +sm-text-uppercase
-
-// XS - EXTRA SMALL
-=xs-text-size
-  font-size: 10px
-  @media (min-width: $xl)
-    font-size: 12px
-
-=xs-text-light
-  +xs-text-size
-  font-weight: $light-weight
-  line-height: 170%
-  letter-spacing: 0.04em
-
-.xs-text-light
-  +xs-text-light
-
-=xs-text-normal
-  +xs-text-size
-  font-weight: $normal-weight
-  line-height: 170%
-  letter-spacing: 0.02em
-  @media (min-width: $md)
-    letter-spacing: 0.04em
-  @media (min-width: $xl)
-    line-height: 150%
-
-.xs-text-normal
-  +xs-text-normal
-
-=xs-text-medium
-  +xs-text-size
-  font-weight: $medium-weight
-  line-height: 170%
-  letter-spacing: 0.02em
-  @media (min-width: $md)
-    letter-spacing: 0.04em
-  @media (min-width: $xl)
-    line-height: 150%
-
-.xs-text-medium
-  +xs-text-medium
-
-=xs-text-bold
-  +xs-text-size
-  font-weight: $bold-weight
-  line-height: 170%
-  letter-spacing: 0.02em
-  @media (min-width: $md)
-    letter-spacing: 0.04em
-  @media (min-width: $xl)
-    line-height: 150%
-
-.xs-text-bold
-  +xs-text-bold
-
-=xs-text-uppercase
-  +xs-text-size
-  @extend .uppercase
-  line-height: 170%
-  letter-spacing: 0.02em
-  @media (min-width: $md)
-    letter-spacing: 0.04em
-
-.xs-text-uppercase
-  +xs-text-uppercase
-
 
 // РАЗМЕРЫ ЗАГОЛОВКОВ
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
