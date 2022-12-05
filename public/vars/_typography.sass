@@ -84,120 +84,11 @@ $bold-weight: 600
 .xs-text-uppercase
   +xs-text-uppercase
 
-
-// LG - LARGE
-=lg-text-size
-  font-size: 15px
-  letter-spacing: 0.02em
-  @media (min-width: $md)
-    font-size: 16px
-  @media (min-width: $xl)
-    font-size: 18px
-
-=lg-text-light
-  +lg-text-size
-  font-weight: $light-weight
-  line-height: 170%
-  @media (min-width: $xl)
-    line-height: 160%
-
-.lg-text-light
-  +lg-text-light
-
-=lg-text-normal
-  +lg-text-size
-  font-weight: $normal-weight
-  line-height: 130%
-
-.lg-text-normal
-  +lg-text-normal
-
-=lg-text-medium
-  +lg-text-size
-  font-weight: $medium-weight
-  line-height: 130%
-
-.lg-text-medium
-  +lg-text-medium
-
-=lg-text-bold
-  +lg-text-size
-  font-weight: $bold-weight
-  line-height: 130%
-
-.lg-text-bold
-  +lg-text-bold
-
-=lg-text-uppercase
-  +lg-text-size
-  @extend .uppercase
-  line-height: 170%
-
-.lg-text-uppercase
-  +lg-text-uppercase
-
-// MD - MIDDLE
-=md-text-size
-  font-size: 14px
-  @media (min-width: $xl)
-    font-size: 16px
-
-=md-text-light
-  +md-text-size
-  font-weight: $light-weight
-  line-height: 150%
-  letter-spacing: 0.04em
-  @media (min-width: $xl)
-    line-height: 160%
-
-.md-text-light
-  +md-text-light
-
-=md-text-normal
-  +md-text-size
-  font-weight: $normal-weight
-  line-height: 150%
-  letter-spacing: 0.02em
-
-.md-text-normal
-  +md-text-normal
-
-=md-text-medium
-  +md-text-size
-  font-weight: $medium-weight
-  line-height: 150%
-  letter-spacing: 0.01em
-
-.md-text-medium
-  +md-text-medium
-
-=md-text-bold
-  +md-text-size
-  font-weight: $bold-weight
-  line-height: 150%
-  letter-spacing: 0.02em
-  @media (min-width: $md)
-    letter-spacing: 0.04em
-
-.md-text-bold
-  +md-text-bold
-
-=md-text-uppercase
-  +md-text-size
-  @extend .uppercase
-  line-height: 170%
-  letter-spacing: 0.02em
-  @media (min-width: $md)
-    letter-spacing: 0.04em
-
-.md-text-uppercase
-  +md-text-uppercase
-
 // SM - SMALL
 =sm-text-size
-  font-size: 12px
-  @media (min-width: $md)
-    font-size: 14px
+  font-size: 1.2rem
+  @media (min-width: $xl)
+    font-size: 1.4rem
 
 =sm-text-light
   +sm-text-size
@@ -256,6 +147,114 @@ $bold-weight: 600
 
 .sm-text-uppercase
   +sm-text-uppercase
+
+// MD - MIDDLE
+=md-text-size
+  font-size: 1.4rem
+  @media (min-width: $xl)
+    font-size: 1.6rem
+
+=md-text-light
+  +md-text-size
+  font-weight: $light-weight
+  line-height: 150%
+  letter-spacing: 0.04em
+  @media (min-width: $xl)
+    line-height: 160%
+
+.md-text-light
+  +md-text-light
+
+=md-text-normal
+  +md-text-size
+  font-weight: $normal-weight
+  line-height: 150%
+  letter-spacing: 0.02em
+
+.md-text-normal
+  +md-text-normal
+
+=md-text-medium
+  +md-text-size
+  font-weight: $medium-weight
+  line-height: 150%
+  letter-spacing: 0.01em
+
+.md-text-medium
+  +md-text-medium
+
+=md-text-bold
+  +md-text-size
+  font-weight: $bold-weight
+  line-height: 150%
+  letter-spacing: 0.02em
+  @media (min-width: $md)
+    letter-spacing: 0.04em
+
+.md-text-bold
+  +md-text-bold
+
+=md-text-uppercase
+  +md-text-size
+  @extend .uppercase
+  line-height: 170%
+  letter-spacing: 0.02em
+  @media (min-width: $md)
+    letter-spacing: 0.04em
+
+.md-text-uppercase
+  +md-text-uppercase
+
+// LG - LARGE
+=lg-text-size
+  font-size: 1.5rem
+  letter-spacing: 0.02em
+  @media (min-width: $md)
+    font-size: 1.6rem
+  @media (min-width: $xl)
+    font-size: 1.8rem
+
+=lg-text-light
+  +lg-text-size
+  font-weight: $light-weight
+  line-height: 170%
+  @media (min-width: $xl)
+    line-height: 160%
+
+.lg-text-light
+  +lg-text-light
+
+=lg-text-normal
+  +lg-text-size
+  font-weight: $normal-weight
+  line-height: 130%
+
+.lg-text-normal
+  +lg-text-normal
+
+=lg-text-medium
+  +lg-text-size
+  font-weight: $medium-weight
+  line-height: 130%
+
+.lg-text-medium
+  +lg-text-medium
+
+=lg-text-bold
+  +lg-text-size
+  font-weight: $bold-weight
+  line-height: 130%
+
+.lg-text-bold
+  +lg-text-bold
+
+=lg-text-uppercase
+  +lg-text-size
+  @extend .uppercase
+  line-height: 170%
+
+.lg-text-uppercase
+  +lg-text-uppercase
 
 // РАЗМЕРЫ ЗАГОЛОВКОВ
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
