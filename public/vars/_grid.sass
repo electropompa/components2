@@ -107,14 +107,42 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
       padding-left: calc(map-get($grid-gutters, #{$breakpoint}) / 2)
       padding-right: calc(map-get($grid-gutters, #{$breakpoint}) / 2)
 
-.no-gutters
-  margin-right: 0
-  margin-left: 0
+@each $breakpoint, $width in $grid-breakpoints
+  @if $breakpoint != "xs"
 
-  > .col,
-  > [class*="col-"]
-    padding-right: 0
-    padding-left: 0
+    .g-#{$breakpoint}-0
+      @media (min-width: #{$width})
+        margin-right: 0
+        margin-left: 0
+
+      > .col,
+      > [class*="col-"]
+        @media (min-width: #{$width})
+          padding-right: 0
+          padding-left: 0
+
+    .g-#{$breakpoint}
+      @media (min-width: #{$width})
+        margin-right: map-get($grid-gutters, #{$breakpoint})
+        margin-left: map-get($grid-gutters, #{$breakpoint})
+
+      > .col,
+      > [class*="col-"]
+        @media (min-width: #{$width})
+          padding-right: map-get($grid-gutters, #{$breakpoint})
+          padding-left: map-get($grid-gutters, #{$breakpoint})
+
+
+  @else
+
+    .no-gutters, .g-0
+      margin-right: 0
+      margin-left: 0
+
+      > .col,
+      > [class*="col-"]
+        padding-right: 0
+        padding-left: 0
 
 // offsets - ОТСТУПЫ
 @each $breakpoint, $width in $grid-breakpoints
@@ -130,3 +158,20 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
     @for $i from 1 through 11
       .offset-#{$i}
         margin-left: calc( $i * 100% / 12)
+
+
+@each $breakpoint, $width in $grid-breakpoints
+  @if $breakpoint != "xs"
+
+    @for $i from 1 through 11
+      .col-#{$breakpoint}-five
+        @media (min-width: #{$width})
+          display: block
+          width: calc( 100% / 5)
+
+  @else
+    .col-five
+      @media (min-width: #{$width})
+        display: block
+        width: calc( 100% / 5)
+

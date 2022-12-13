@@ -20,6 +20,7 @@
     <li><a href="#theme-variables" title="Theme variables">Theme variables</a></li>
     <li><a href="#icons" title="Icons">Icons</a></li>
     <li><a href="#colors" title="Colors">Colors</a></li>
+    <li><a href="#grid" title="Grid">Grid</a></li>
     <li><a href="#typography" title="Typography">Typography</a></li>
     <li><a href="#badges" title="Badges">Badges</a></li>
     <li><a href="#alerts" title="Alerts">Alerts</a></li>
@@ -110,6 +111,7 @@
       <p>Как и в Bootstrap, сетка на flexbox</p>
       <ul class="list-dots">
         <li>.no-gutters</li>
+        <li>.g-0</li>
         <li>.col</li>
         <li>.col-* col-sm-* col-md-* .col-lg-* .col-xl-* .col-xxl-*</li>
         <li>.offset-*</li>
@@ -184,6 +186,13 @@
   <div class="row my-3">
     <div class="col-1"><div class="bg-primary p-3">col-1</div></div>
     <div class="col-11"><div class="bg-success p-3">col-11</div></div>
+  </div>
+  <div class="row my-3">
+    <div class="col-five"><div class="bg-primary p-3">col-five</div></div>
+    <div class="col-five"><div class="bg-success p-3">col-five</div></div>
+    <div class="col-five"><div class="bg-primary p-3">col-five</div></div>
+    <div class="col-five"><div class="bg-success p-3">col-five</div></div>
+    <div class="col-five"><div class="bg-primary p-3">col-five</div></div>
   </div>
 
   <h2 id="typography" class="my-5">Typography</h2>
