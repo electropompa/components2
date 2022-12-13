@@ -148,11 +148,15 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
 @each $breakpoint, $width in $grid-breakpoints
   @if $breakpoint != "xs"
 
+    .offset-#{$breakpoint}-0
+      @media (min-width: #{$width})
+        margin-left: 0
+
     @for $i from 1 through 11
       .offset-#{$breakpoint}-#{$i}
         @media (min-width: #{$width})
           margin-left: calc( $i * 100% / 12)
-
+ 
   @else
 
     @for $i from 1 through 11
