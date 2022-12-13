@@ -123,14 +123,14 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
 
     .g-#{$breakpoint}
       @media (min-width: #{$width})
-        margin-right: map-get($grid-gutters, #{$breakpoint})
-        margin-left: map-get($grid-gutters, #{$breakpoint})
+        margin-right: - calc( map-get($grid-gutters, #{$breakpoint}) / 2)
+        margin-left: - calc( map-get($grid-gutters, #{$breakpoint}) / 2)
 
       > .col,
       > [class*="col-"]
         @media (min-width: #{$width})
-          padding-right: map-get($grid-gutters, #{$breakpoint})
-          padding-left: map-get($grid-gutters, #{$breakpoint})
+          padding-right: calc( map-get($grid-gutters, #{$breakpoint}) / 2)
+          padding-left: calc( map-get($grid-gutters, #{$breakpoint}) / 2)
 
 
   @else
@@ -156,7 +156,7 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
       .offset-#{$breakpoint}-#{$i}
         @media (min-width: #{$width})
           margin-left: calc( $i * 100% / 12)
- 
+
   @else
 
     @for $i from 1 through 11
