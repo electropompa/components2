@@ -216,6 +216,16 @@
 
       <h3 class="my-4">xs-text-normal</h3>
       <p class="xs-text-normal"><b>Paragraph</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda atque, dignissimos earum harum itaque mollitia nesciunt nihil perspiciatis, saepe tempora temporibus. Autem consectetur, debitis dolore iste quisquam voluptatem. Aliquam dolore in molestiae temporibus. Hic modi non numquam! Ab atque deserunt dicta eaque eos harum inventore iure, maxime minima mollitia, obcaecati pariatur quae saepe sint suscipit totam ut veritatis.</p>
+
+      <button class="btn btn-primary">.btn.btn-primary</button>
+      <button class="btn btn-secondary">.btn.btn-secondary</button>
+      <button class="btn btn-success">.btn.btn-success</button>
+      <button class="btn btn-warning">.btn.btn-warning</button>
+      <button class="btn btn-light">.btn.btn-light</button>
+      <button class="btn btn-info">.btn.btn-info</button>
+      <button class="btn btn-danger">.btn.btn-danger</button>
+      <button class="btn btn-dark">.btn.btn-dark</button>
+
     </div>
     <div class="col-12 col-lg-5">
 
