@@ -291,8 +291,18 @@
         <li>.text-center (.text-*-center)</li>
       </ul>
     </div>
-    <div class="col-12 col-md-3">
-
+    <div class="col-12 col-md-4">
+      <div class="row">
+        <div class="col-6">
+          <div class="p-3 border">.border</div>
+          <div class="p-3 border-start">.border-start</div>
+          <div class="p-3 border-bottom">.border-bottom</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border-top">.border-top</div>
+          <div class="p-3 border-end">.border-end</div>
+        </div>
+      </div>
     </div>
   </div>
 
