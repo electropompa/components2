@@ -217,14 +217,14 @@
       <h3 class="my-4">xs-text-normal</h3>
       <p class="xs-text-normal"><b>Paragraph</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda atque, dignissimos earum harum itaque mollitia nesciunt nihil perspiciatis, saepe tempora temporibus. Autem consectetur, debitis dolore iste quisquam voluptatem. Aliquam dolore in molestiae temporibus. Hic modi non numquam! Ab atque deserunt dicta eaque eos harum inventore iure, maxime minima mollitia, obcaecati pariatur quae saepe sint suscipit totam ut veritatis.</p>
 
-      <button class="btn btn-primary">.btn.btn-primary</button>
-      <button class="btn btn-secondary">.btn.btn-secondary</button>
-      <button class="btn btn-success">.btn.btn-success</button>
-      <button class="btn btn-warning">.btn.btn-warning</button>
-      <button class="btn btn-light">.btn.btn-light</button>
-      <button class="btn btn-info">.btn.btn-info</button>
-      <button class="btn btn-danger">.btn.btn-danger</button>
-      <button class="btn btn-dark">.btn.btn-dark</button>
+      <button class="mb-3 btn btn-primary">.btn.btn-primary</button>
+      <button class="mb-3 btn btn-secondary">.btn.btn-secondary</button>
+      <button class="mb-3 btn btn-success">.btn.btn-success</button>
+      <button class="mb-3 btn btn-warning">.btn.btn-warning</button>
+      <button class="mb-3 btn btn-light">.btn.btn-light</button>
+      <button class="mb-3 btn btn-info">.btn.btn-info</button>
+      <button class="mb-3 btn btn-danger">.btn.btn-danger</button>
+      <button class="mb-3 btn btn-dark">.btn.btn-dark</button>
 
     </div>
     <div class="col-12 col-lg-5">
@@ -248,9 +248,9 @@
       <div class="alert alert-success">background-color: emerald-200, border-color: green-300, color: green-900</div>
       <div class="alert alert-danger">background-color: rose-200, border-color: rose-400, color: rose-900</div>
       <div class="alert alert-warning">background-color: emerald-200, border-color: green-300, color: green-900</div>
-      <div class="alert alert-info">background-color: emerald-200, border-color: green-300, color: green-900</div>
-      <div class="alert alert-light">background-color: emerald-200, border-color: green-300, color: green-900</div>
-      <div class="alert alert-dark">background-color: emerald-200, border-color: green-300, color: green-900</div>
+      <div class="alert alert-info">background-color: cyan-200, border-color: cyan-300, color: cyan-900</div>
+      <div class="alert alert-light">background-color: gray-100, border-color: gray-200, color: gray-500</div>
+      <div class="alert alert-dark">background-color: slate-400, border-color: green-300, color: green-900</div>
 
       <h3 class="text-center my-5">BG Classes</h3>
       <div class="row">
@@ -408,12 +408,73 @@
         <input id="email-input"  type="email" placeholder="test@test.ru">
       </label>
     </div>
-    <div class="col-xl-4">
-
-    </div>
+    <div class="col-xl-6"></div>
   </div>
 
+  <h3 class="my-5">Tables</h3>
+  <table class="table-bordered">
+    <thead>
+    <tr>
+      <th>Стрижка (мытье + укладка включены в стоимость)</th>
+      <th>Мастер</th>
+      <th>Топ-мастер</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Короткие (до 10см)</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    <tr>
+      <td>Средние (до 20см)</td>
+      <td>1700 руб.</td>
+      <td>1900 руб.</td>
+    </tr>
+    <tr>
+      <td>Длинные (до 40см)</td>
+      <td>2000 руб.</td>
+      <td>2200 руб.</td>
+    </tr>
+    <tr>
+      <td data-title="Стрижка кончиков волос одним срезом">Стрижка кончиков волос одним срезом</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    </tbody>
+  </table>
 
+  <table>
+    <thead>
+    <tr>
+      <th>Стрижка (мытье + укладка включены в стоимость)</th>
+      <th>Мастер</th>
+      <th>Топ-мастер</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Короткие (до 10см)</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    <tr>
+      <td>Средние (до 20см)</td>
+      <td>1700 руб.</td>
+      <td>1900 руб.</td>
+    </tr>
+    <tr>
+      <td>Длинные (до 40см)</td>
+      <td>2000 руб.</td>
+      <td>2200 руб.</td>
+    </tr>
+    <tr>
+      <td data-title="Стрижка кончиков волос одним срезом">Стрижка кончиков волос одним срезом</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    </tbody>
+  </table>
 </div>
 
 <h2 class="text-center my-5">Block Shift</h2>

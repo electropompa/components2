@@ -19,18 +19,20 @@ table
         text-decoration: none
         +transition(color)
 
+table
+  th, td
+    text-align: left
+
 table:not(.table-bordered)
   border-spacing: 0 10px
   border-collapse: separate
 
   th
     +sm-text-uppercase
-    text-align: left
     vertical-align: bottom
 
   th[scope="row"]
     background: white
-    text-align: left
     vertical-align: middle
     padding-left: 20px
 

@@ -1,8 +1,8 @@
 // INPUT нужно оборачивать в label
 
 input
+  @extend .border
   +sm-text-medium
-  border: 1px solid var(--gray-400)
   padding: 14px 16px
   width: 100%
   +transition( border-color )
@@ -55,7 +55,7 @@ input
   @extend .component__input__add-bs-icon-to-label
   &:after
     content: '\f4e1'
-    top: 3px
+    top: 48px
     left: 16px
 
 .component__input__phone__label

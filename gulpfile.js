@@ -1,9 +1,10 @@
 const { src, dest, watch } = require( 'gulp' ),
     sass            = require( 'gulp-sass' )(require('sass')),
     csso            = require( 'gulp-csso' ),
-    autoprefixer    = require('autoprefixer'),
+    autoprefixer    = require( 'autoprefixer' ),
     postcss         = require( 'gulp-postcss' ),
     gcmq            = require( 'gulp-group-css-media-queries' ),
+    clean           = require( 'gulp-clean' ),
     sourcemaps      = require( 'gulp-sourcemaps' ),
     livereload      = require( 'gulp-livereload' );
 
@@ -17,19 +18,22 @@ function styles(){
     return src( sassEntry )
        .pipe( sourcemaps.init() )
        .pipe( sass() )
-       .pipe( sourcemaps.write() )
+       .pipe( sourcemaps.write('.') )
        .pipe( dest("public/") )
        .pipe( livereload() )
 }
 exports.styles = styles;
 
-const productionStyles = () =>
-   src( sassEntry )
-      .pipe( sass().on( 'error', sass.logError ) )
-      .pipe( postcss(processors) )
-      .pipe( gcmq() )
-      .pipe( csso() )
-      .pipe( dest( "public/" ) );
+const productionStyles = () => {
+    src('public/styles.css.map').pipe(clean());
+    return src( sassEntry )
+       .pipe( sass().on( 'error', sass.logError ) )
+       .pipe( postcss(processors) )
+       .pipe( gcmq() )
+       .pipe( csso() )
+       .pipe( dest( "public/" ) );
+}
+
 
 exports.productionStyles = productionStyles;
 
