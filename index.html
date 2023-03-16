@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://coomponents.loc/ -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./public/styles.css">
+  <!-- <link rel="preconnect" href="//fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="//fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="//fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=PT+Serif:wght@400&display=swap" rel="stylesheet"> -->
+  <title>Компоненты</title>
+</head>
+<body>
+
+<aside>
+  <h4>Оглавление</h4>
+  <ol>
+    <li><a href="http://coomponents.loc/#reset" title="Reset">Reset</a></li>
+    <li><a href="http://coomponents.loc/#variables" title="variables">Variables</a></li>
+    <li><a href="http://coomponents.loc/#theme-variables" title="Theme variables">Theme variables</a></li>
+    <li><a href="http://coomponents.loc/#icons" title="Icons">Icons</a></li>
+    <li><a href="http://coomponents.loc/#colors" title="Colors">Colors</a></li>
+    <li><a href="http://coomponents.loc/#grid" title="Grid">Grid</a></li>
+    <li><a href="http://coomponents.loc/#typography" title="Typography">Typography</a></li>
+    <li><a href="http://coomponents.loc/#badges" title="Badges">Badges</a></li>
+    <li><a href="http://coomponents.loc/#alerts" title="Alerts">Alerts</a></li>
+    <li><a href="http://coomponents.loc/#typography-utilities" title="Typography utilities">Typography utilities</a></li>
+    <li><a href="http://coomponents.loc/#utilities" title="Utilities">Utilities</a></li>
+  </ol>
+</aside>
+
+<h1 class="text-center">Документация по компонентам</h1>
+
+<div class="container">
+  <p>Все файлы подключаются в style.sass</p>
+
+  <div class="row">
+    <div class="col-12 col-xl-4">
+      <h2 id="reset">Reset</h2>
+      <p>Самый простой Reset. Добавлены миксины:</p>
+      <ul>
+        <li>=reset-buttons</li>
+        <li>=reset-list</li>
+      </ul>
+      <p><b>Сброшены маркеры у ul</b></p>
+    </div>
+    <div class="col-12 col-xl-2">
+      <h2 id="variables">Variables</h2>
+      <ul class="list-dots">
+        <li>Breakpoints</li>
+        <li>Shadows
+          <ul class="list-dots">
+            <li>=shadow</li>
+            <li>=shadowHover</li>
+          </ul>
+        </li>
+        <li>Transition</li>
+        <li>Spacers</li>
+      </ul>
+    </div>
+    <div class="col-12 col-xl-3">
+      <h2 id="theme-variables">Theme Variables</h2>
+      <ul class="list-dots">
+        <li>Theme colors ($accent)</li>
+        <li>Theme fonts
+          <ol>
+            <li>$heading-font</li>
+            <li>$text-font</li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+    <div class="col-12 col-xl-3">
+      <h2 id="icons">Icons</h2>
+      <p>Подключает Bootstrap Icons через миксин <b>=bs-font</b></p>
+    </div>
+  </div>
+
+  <h2 id="colors" class="my-5">Colors</h2>
+  <div class="row">
+    <div class="col-4 col-md-1"><div class="color-block-wrapper black">$black</div></div>
+    <div class="col-4 col-md-1"><div class="color-block-wrapper white">$white</div></div>
+    <div class="col-4 col-md-1"><div class="color-block-wrapper accent">$accnet</div></div>
+  </div>
+
+  <h2 class="mt-5">Color Palette</h2>
+
+  
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">slate</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper slate-50">slate-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper slate-100">slate-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper slate-200">slate-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper slate-300">slate-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper slate-400">slate-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper slate-500">slate-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper slate-600">slate-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper slate-700">slate-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper slate-800">slate-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper slate-900">slate-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">gray</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper gray-50">gray-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper gray-100">gray-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper gray-200">gray-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper gray-300">gray-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper gray-400">gray-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper gray-500">gray-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper gray-600">gray-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper gray-700">gray-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper gray-800">gray-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper gray-900">gray-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">zinc</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper zinc-50">zinc-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper zinc-100">zinc-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper zinc-200">zinc-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper zinc-300">zinc-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper zinc-400">zinc-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper zinc-500">zinc-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper zinc-600">zinc-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper zinc-700">zinc-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper zinc-800">zinc-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper zinc-900">zinc-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">neutral</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper neutral-50">neutral-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper neutral-100">neutral-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper neutral-200">neutral-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper neutral-300">neutral-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper neutral-400">neutral-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper neutral-500">neutral-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper neutral-600">neutral-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper neutral-700">neutral-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper neutral-800">neutral-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper neutral-900">neutral-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">stone</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper stone-50">stone-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper stone-100">stone-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper stone-200">stone-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper stone-300">stone-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper stone-400">stone-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper stone-500">stone-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper stone-600">stone-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper stone-700">stone-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper stone-800">stone-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper stone-900">stone-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">red</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper red-50">red-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper red-100">red-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper red-200">red-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper red-300">red-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper red-400">red-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper red-500">red-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper red-600">red-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper red-700">red-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper red-800">red-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper red-900">red-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">orange</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper orange-50">orange-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper orange-100">orange-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper orange-200">orange-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper orange-300">orange-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper orange-400">orange-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper orange-500">orange-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper orange-600">orange-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper orange-700">orange-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper orange-800">orange-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper orange-900">orange-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">amber</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper amber-50">amber-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper amber-100">amber-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper amber-200">amber-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper amber-300">amber-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper amber-400">amber-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper amber-500">amber-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper amber-600">amber-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper amber-700">amber-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper amber-800">amber-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper amber-900">amber-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">yellow</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper yellow-50">yellow-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper yellow-100">yellow-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper yellow-200">yellow-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper yellow-300">yellow-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper yellow-400">yellow-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper yellow-500">yellow-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper yellow-600">yellow-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper yellow-700">yellow-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper yellow-800">yellow-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper yellow-900">yellow-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">lime</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper lime-50">lime-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper lime-100">lime-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper lime-200">lime-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper lime-300">lime-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper lime-400">lime-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper lime-500">lime-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper lime-600">lime-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper lime-700">lime-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper lime-800">lime-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper lime-900">lime-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">green</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper green-50">green-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper green-100">green-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper green-200">green-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper green-300">green-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper green-400">green-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper green-500">green-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper green-600">green-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper green-700">green-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper green-800">green-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper green-900">green-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">emerald</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper emerald-50">emerald-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper emerald-100">emerald-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper emerald-200">emerald-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper emerald-300">emerald-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper emerald-400">emerald-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper emerald-500">emerald-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper emerald-600">emerald-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper emerald-700">emerald-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper emerald-800">emerald-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper emerald-900">emerald-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">teal</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper teal-50">teal-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper teal-100">teal-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper teal-200">teal-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper teal-300">teal-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper teal-400">teal-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper teal-500">teal-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper teal-600">teal-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper teal-700">teal-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper teal-800">teal-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper teal-900">teal-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">cyan</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper cyan-50">cyan-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper cyan-100">cyan-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper cyan-200">cyan-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper cyan-300">cyan-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper cyan-400">cyan-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper cyan-500">cyan-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper cyan-600">cyan-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper cyan-700">cyan-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper cyan-800">cyan-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper cyan-900">cyan-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">sky</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper sky-50">sky-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper sky-100">sky-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper sky-200">sky-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper sky-300">sky-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper sky-400">sky-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper sky-500">sky-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper sky-600">sky-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper sky-700">sky-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper sky-800">sky-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper sky-900">sky-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">blue</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper blue-50">blue-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper blue-100">blue-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper blue-200">blue-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper blue-300">blue-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper blue-400">blue-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper blue-500">blue-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper blue-600">blue-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper blue-700">blue-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper blue-800">blue-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper blue-900">blue-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">indigo</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper indigo-50">indigo-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper indigo-100">indigo-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper indigo-200">indigo-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper indigo-300">indigo-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper indigo-400">indigo-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper indigo-500">indigo-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper indigo-600">indigo-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper indigo-700">indigo-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper indigo-800">indigo-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper indigo-900">indigo-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">violet</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper violet-50">violet-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper violet-100">violet-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper violet-200">violet-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper violet-300">violet-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper violet-400">violet-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper violet-500">violet-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper violet-600">violet-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper violet-700">violet-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper violet-800">violet-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper violet-900">violet-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">purple</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper purple-50">purple-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper purple-100">purple-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper purple-200">purple-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper purple-300">purple-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper purple-400">purple-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper purple-500">purple-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper purple-600">purple-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper purple-700">purple-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper purple-800">purple-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper purple-900">purple-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">fuchsia</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper fuchsia-50">fuchsia-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper fuchsia-100">fuchsia-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper fuchsia-200">fuchsia-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper fuchsia-300">fuchsia-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper fuchsia-400">fuchsia-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper fuchsia-500">fuchsia-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper fuchsia-600">fuchsia-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper fuchsia-700">fuchsia-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper fuchsia-800">fuchsia-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper fuchsia-900">fuchsia-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">pink</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper pink-50">pink-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper pink-100">pink-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper pink-200">pink-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper pink-300">pink-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper pink-400">pink-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper pink-500">pink-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper pink-600">pink-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper pink-700">pink-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper pink-800">pink-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper pink-900">pink-900</div></div>
+
+                </div>
+    
+      <div class="row no-gutters">
+        <div class="col-4 col-md-2">
+          <h3 class="text-capitalize">rose</h3>
+        </div>
+        <div class="col-4 col-md-1 mb-2"><div class="md-text-normal color-block-wrapper rose-50">rose-50</div></div>
+        
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper rose-100">rose-100</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper rose-200">rose-200</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper rose-300">rose-300</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper rose-400">rose-400</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper rose-500">rose-500</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper rose-600">rose-600</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper rose-700">rose-700</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper rose-800">rose-800</div></div>
+
+          
+            <div class="col-4 col-md-1 mb-2"><div class="sm-text-normal color-block-wrapper rose-900">rose-900</div></div>
+
+                </div>
+    
+  <h2 id="grid" class="my-5">Grid</h2>
+  <div class="row">
+    <div class="col-12 col-md-4">
+      <p>Сетка отличается от Bootstrap, в первую очередь, тем, что от Breakpoins меняется Gutters</p>
+      <p>Как и в Bootstrap, сетка на flexbox</p>
+      <ul class="list-dots">
+        <li>.no-gutters</li>
+        <li>.g-0</li>
+        <li>.col</li>
+        <li>.col-* col-sm-* col-md-* .col-lg-* .col-xl-* .col-xxl-*</li>
+        <li>.offset-*</li>
+        <li>.order[-breakpoint]-(first|0|1|2|3|4|5|last)</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-2">
+      <h3>Breakpoints</h3>
+      <ul class="list-dots">
+        <li>$xs: 480px</li>
+        <li>$sm: 576px</li>
+        <li>$md: 768px</li>
+        <li>$lg: 1024px</li>
+        <li>$xl: 1400px</li>
+        <li>$xxl: 1500px</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-2">
+      <h3>Gutters</h3>
+      <ul class="list-dots">
+        <li>"xs": 20px</li>
+        <li>"sm": 24px</li>
+        <li>"md": 30px</li>
+        <li>"lg": 32px</li>
+        <li>"xl": 34px</li>
+        <li>"xxl": 36px</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-4">
+      <h3>Размеры</h3>
+      <ul class="list-dots">
+        <li><b>$sm диапазон</b>: 576px - 767px</li>
+        <li><b>$sm-container</b>: 552px = 528px - padding 12px * 2</li>
+      </ul>
+      <ul class="list-dots">
+        <li><b>$md диапазон</b>: 768px - 1023px</li>
+        <li><b>$md-container</b>: 708px = 738px - padding 15px * 2</li>
+      </ul>
+      <ul class="list-dots">
+        <li><b>$lg диапазон</b>: 1024px - 1399px</li>
+        <li><b>$lg-container</b>: 960px = 992px - padding 16px * 2</li>
+      </ul>
+      <ul class="list-dots">
+        <li><b>$xl диапазон</b>: 1400px - 1499px</li>
+        <li><b>$xl-container</b>: 1332px = 1366px - padding 17px * 2</li>
+      </ul>
+      <ul class="list-dots">
+        <li><b>$xxl-container</b>: 1428px = 1464px - padding 18px * 2</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col-6"><div class="bg-primary p-3">col-6</div></div>
+    <div class="col-6"><div class="bg-success p-3">col-6</div></div>
+  </div>
+  <div class="row my-3">
+    <div class="col-5"><div class="bg-primary p-3">col-5</div></div>
+    <div class="col-7"><div class="bg-success p-3">col-7</div></div>
+  </div>
+  <div class="row my-3">
+    <div class="col-4"><div class="bg-primary p-3">col-4</div></div>
+    <div class="col-8"><div class="bg-success p-3">col-8</div></div>
+  </div>
+  <div class="row my-3">
+    <div class="col-3"><div class="bg-primary p-3">col-3</div></div>
+    <div class="col-9"><div class="bg-success p-3">col-9</div></div>
+  </div>
+  <div class="row my-3">
+    <div class="col-2"><div class="bg-primary p-3">col-2</div></div>
+    <div class="col-10"><div class="bg-success p-3">col-10</div></div>
+  </div>
+  <div class="row my-3">
+    <div class="col-1"><div class="bg-primary p-3">col-1</div></div>
+    <div class="col-11"><div class="bg-success p-3">col-11</div></div>
+  </div>
+  <div class="row my-3">
+    <div class="col-five"><div class="bg-primary p-3">col-five</div></div>
+    <div class="col-five"><div class="bg-success p-3">col-five</div></div>
+    <div class="col-five"><div class="bg-primary p-3">col-five</div></div>
+    <div class="col-five"><div class="bg-success p-3">col-five</div></div>
+    <div class="col-five"><div class="bg-primary p-3">col-five</div></div>
+  </div>
+
+  <h2 id="typography" class="my-5">Typography</h2>
+  <div class="row">
+    <div class="col-12 col-lg-7">
+      <h1>Пример заголовока H1 <span class="badge bg-primary ">Badges</span></h1>
+      <h2>Пример заголовока H2 <span class="badge bg-primary">Badges</span></h2>
+      <h3>Пример заголовока H3 <span class="badge bg-primary">Badges</span></h3>
+      <h4>Пример заголовока H4 <span class="badge bg-primary">Badges</span></h4>
+      <h5>Пример заголовока H5 <span class="badge bg-primary">Badges</span></h5>
+      <h6>Пример заголовока H6 <span class="badge bg-primary">Badges</span></h6>
+
+      <h3 class="mb-4 mt-5">lg-text-normal</h3>
+      <p class="lg-text-normal"><b>Paragraph</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda atque, dignissimos earum harum itaque mollitia nesciunt nihil perspiciatis, saepe tempora temporibus. Autem consectetur, debitis dolore iste quisquam voluptatem. Aliquam dolore in molestiae temporibus. Hic modi non numquam! Ab atque deserunt dicta eaque eos harum inventore iure, maxime minima mollitia, obcaecati pariatur quae saepe sint suscipit totam ut veritatis.</p>
+
+      <h3 class="my-4">md-text-normal - по-умолчанию</h3>
+      <p class="md-text-normal"><b>Paragraph</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda atque, dignissimos earum harum itaque mollitia nesciunt nihil perspiciatis, saepe tempora temporibus. Autem consectetur, debitis dolore iste quisquam voluptatem. Aliquam dolore in molestiae temporibus. Hic modi non numquam! Ab atque deserunt dicta eaque eos harum inventore iure, maxime minima mollitia, obcaecati pariatur quae saepe sint suscipit totam ut veritatis.</p>
+
+      <h3 class="my-4">sm-text-normal</h3>
+      <p class="sm-text-normal"><b>Paragraph</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda atque, dignissimos earum harum itaque mollitia nesciunt nihil perspiciatis, saepe tempora temporibus. Autem consectetur, debitis dolore iste quisquam voluptatem. Aliquam dolore in molestiae temporibus. Hic modi non numquam! Ab atque deserunt dicta eaque eos harum inventore iure, maxime minima mollitia, obcaecati pariatur quae saepe sint suscipit totam ut veritatis.</p>
+
+      <h3 class="my-4">xs-text-normal</h3>
+      <p class="xs-text-normal"><b>Paragraph</b>: Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad assumenda atque, dignissimos earum harum itaque mollitia nesciunt nihil perspiciatis, saepe tempora temporibus. Autem consectetur, debitis dolore iste quisquam voluptatem. Aliquam dolore in molestiae temporibus. Hic modi non numquam! Ab atque deserunt dicta eaque eos harum inventore iure, maxime minima mollitia, obcaecati pariatur quae saepe sint suscipit totam ut veritatis.</p>
+
+      <button class="mb-3 btn btn-primary">.btn.btn-primary</button>
+      <button class="mb-3 btn btn-secondary">.btn.btn-secondary</button>
+      <button class="mb-3 btn btn-success">.btn.btn-success</button>
+      <button class="mb-3 btn btn-warning">.btn.btn-warning</button>
+      <button class="mb-3 btn btn-light">.btn.btn-light</button>
+      <button class="mb-3 btn btn-info">.btn.btn-info</button>
+      <button class="mb-3 btn btn-danger">.btn.btn-danger</button>
+      <button class="mb-3 btn btn-dark">.btn.btn-dark</button>
+
+    </div>
+    <div class="col-12 col-lg-5">
+
+      <h3 id="badges" class="mb-3 text-center">Badges</h3>
+
+      <span class="badge mb-2 bg-primary">Primary</span>
+      <span class="badge mb-2 bg-secondary">Secondary</span>
+      <span class="badge mb-2 bg-success">Success</span>
+      <span class="badge mb-2 bg-danger">Danger</span>
+      <span class="badge mb-2 bg-warning text-dark">Warning</span>
+      <span class="badge mb-2 bg-info text-dark">Info</span>
+      <span class="badge mb-2 bg-light text-dark">Light</span>
+      <span class="badge mb-2 bg-dark">Dark</span>
+
+      <p>Цвет меняется в _colors.sass</p>
+
+      <h3 id="alerts" class="mt-5 text-center">Alrets</h3>
+      <div class="alert alert-primary">background-color: sky-200, border-color: sky-300, color: blue-900</div>
+      <div class="alert alert-secondary">background-color: gray-200, border-color: gray-300, color: gray-900</div>
+      <div class="alert alert-success">background-color: emerald-200, border-color: green-300, color: green-900</div>
+      <div class="alert alert-danger">background-color: rose-200, border-color: rose-400, color: rose-900</div>
+      <div class="alert alert-warning">background-color: emerald-200, border-color: green-300, color: green-900</div>
+      <div class="alert alert-info">background-color: cyan-200, border-color: cyan-300, color: cyan-900</div>
+      <div class="alert alert-light">background-color: gray-100, border-color: gray-200, color: gray-500</div>
+      <div class="alert alert-dark">background-color: slate-400, border-color: green-300, color: green-900</div>
+
+      <h3 class="text-center my-5">BG Classes</h3>
+      <div class="row">
+        <div class="col-6"><div class="bg-primary p-3">.bg-primary</div></div>
+        <div class="col-6"><div class="bg-secondary p-3">.bg-secondary</div></div>
+        <div class="col-6"><div class="bg-success p-3">.bg-success</div></div>
+        <div class="col-6"><div class="bg-info p-3">.bg-info</div></div>
+        <div class="col-6"><div class="bg-warning p-3">.bg-warning</div></div>
+        <div class="col-6"><div class="bg-danger p-3">.bg-danger</div></div>
+        <div class="col-6"><div class="bg-light p-3">.bg-light</div></div>
+        <div class="col-6"><div class="bg-dark p-3">.bg-dark</div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <h2 id="typography-utilities" class="my-5">Typography utilities</h2>
+  <div class="row">
+    <div class="col-12 col-md-2">
+      <ul class="list-dots">
+        <li>.fw-bold</li>
+        <li>.nowrap</li>
+        <li>small, .small</li>
+        <li>.text-dark</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-3">
+      <ul class="list-dots">
+        <li>.uppercase - UPPERCASE</li>
+        <li>.text-capitalize - Capitalize</li>
+        <li>.text-lowercase - lowercase</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-3">
+      <ul class="list-dots">
+        <li>.text-left (.text-*-left)</li>
+        <li>.text-right (.text-*-right)</li>
+        <li>.text-center (.text-*-center)</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="row">
+        <div class="col-6">
+          <div class="p-3 border">.border</div>
+          <div class="p-3 border-start">.border-start</div>
+          <div class="p-3 border-bottom">.border-bottom</div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 border-top">.border-top</div>
+          <div class="p-3 border-end">.border-end</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="utilities" class="my-5">Utilities</h2>
+  <div class="row">
+    <div class="col-12 col-xl-4">
+      <ul class="list-dots">
+        <li>.white-bg-wrapper - padding 40/60 для больших блоков</li>
+        <li class="bg-black">.bg-black</li>
+        <li class="bg-white">.bg-white</li>
+        <li class="bg-accent">.bg-accent</li>
+        <li class="border-top">.border-top - gray-500</li>
+      </ul>
+    </div>
+    <div class="col-12 col-xl-4">
+      <h4>Стандартные Bootstrap отступы</h4>
+      <p>.(m|p)[-(t|r|b|l|y|x)]-*</p>
+      <ul class="list-dots">
+        <li>.position-(static|relative|absolute|fixed|sticky)</li>
+        <li>.hidden</li>
+        <li>.rounded-2</li>
+        <li>.w-100</li>
+        <li>.h-100</li>
+      </ul>
+    </div>
+    <div class="col-12 col-xl-4">
+      <h4>Стандартные Bootstrap Displays</h4>
+      <ul class="list-dots">
+        <li>.d[-breakpoint]-block</li>
+        <li>.d[-breakpoint]-inline-block</li>
+        <li>.d[-breakpoint]-inline</li>
+        <li>.d[-breakpoint]-flex</li>
+        <li>.d[-breakpoint]-none</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="my-3">Flexbox Utilities</h3>
+  <div class="row">
+    <div class="col-12 col-xl-2">
+      <ul class="list-dots">
+        <li>=flex-center</li>
+        <li>=flex-row-sb</li>
+        <li>=flex-row-sb-aic</li>
+        <li>=flex-row-sa</li>
+        <li>=flex-row-sa-aic</li>
+        <li>=flex-row-start</li>
+        <li>=flex-column-sb</li>
+        <li>=flex-column-aic</li>
+      </ul>
+    </div>
+    <div class="col-12 col-xl-2">
+      <ul class="list-dots">
+        <li>.justify-content-start</li>
+        <li>.justify-content-end</li>
+        <li>.justify-content-center</li>
+        <li>.justify-content-between</li>
+        <li>.justify-content-around</li>
+      </ul>
+    </div>
+    <div class="col-12 col-xl-2">
+      <ul class="list-dots">
+        <li>.align-items-start</li>
+        <li>.align-items-end</li>
+        <li>.align-items-center</li>
+        <li>.align-items-baseline</li>
+        <li>.align-items-stretch</li>
+      </ul>
+    </div>
+    <div class="col-12 col-xl-2">
+      <ul class="list-dots">
+        <li>.align-content-start</li>
+        <li>.align-content-end</li>
+        <li>.align-content-center</li>
+        <li>.align-content-between</li>
+        <li>.align-content-around</li>
+        <li>.align-content-stretch</li>
+      </ul>
+    </div>
+    <div class="col-12 col-xl-2">
+      <ul class="list-dots">
+        <li>.align-self-auto</li>
+        <li>.align-self-start</li>
+        <li>.align-self-end</li>
+        <li>.align-self-center</li>
+        <li>.align-self-baseline</li>
+        <li>.align-self-stretch</li>
+      </ul>
+    </div>
+    <div class="col-12 col-xl-2">
+      <ul class="list-dots">
+        <li>.align-baseline</li>
+        <li>.align-top</li>
+        <li>.align-middle</li>
+        <li>.align-bottom</li>
+        <li>.align-text-bottom</li>
+        <li>.align-text-top</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="my-5">Forms</h3>
+  <div class="row">
+    <div class="col-xl-3">
+      <label for="text-input" class="component__input__name__label">
+        Text input
+        <input id="text-input" type="text" placeholder="Введите текст">
+      </label>
+    </div>
+    <div class="col-xl-3">
+      <label for="email-input">
+        Email input
+        <input id="email-input" type="email" placeholder="test@test.ru">
+      </label>
+    </div>
+    <div class="col-xl-6"></div>
+  </div>
+
+  <h3 class="my-5">Tables</h3>
+  <table class="table-bordered">
+    <thead>
+    <tr>
+      <th>Стрижка (мытье + укладка включены в стоимость)</th>
+      <th>Мастер</th>
+      <th>Топ-мастер</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Короткие (до 10см)</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    <tr>
+      <td>Средние (до 20см)</td>
+      <td>1700 руб.</td>
+      <td>1900 руб.</td>
+    </tr>
+    <tr>
+      <td>Длинные (до 40см)</td>
+      <td>2000 руб.</td>
+      <td>2200 руб.</td>
+    </tr>
+    <tr>
+      <td data-title="Стрижка кончиков волос одним срезом">Стрижка кончиков волос одним срезом</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Стрижка (мытье + укладка включены в стоимость)</th>
+      <th>Мастер</th>
+      <th>Топ-мастер</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Короткие (до 10см)</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    <tr>
+      <td>Средние (до 20см)</td>
+      <td>1700 руб.</td>
+      <td>1900 руб.</td>
+    </tr>
+    <tr>
+      <td>Длинные (до 40см)</td>
+      <td>2000 руб.</td>
+      <td>2200 руб.</td>
+    </tr>
+    <tr>
+      <td data-title="Стрижка кончиков волос одним срезом">Стрижка кончиков волос одним срезом</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="text-center my-5">Block Shift</h2>
+
+<section class="block-shift-img block-right-img-shift block-shift-img__outer-title">
+  <div class="container">
+    <div class="block-shift__grid">
+      <h3 class="block-shift__title">О дистрибьюторе</h3>
+      <div class="block-shift__desc">
+        <p>Поддержание полного ассортимента товаров и зап частей в наличии на собственном складском комплексе площадью более 1500 м<sup>2</sup> позволяет комплектовать заказы любой сложности в самые короткие сроки.</p>
+        <p>Региональным покупателям бесплатно доставим товар до терминалов транспортноых компаний в г. Москве.</p>
+        <p>Услуги гарантийного и постгарантийного обслужвания, ремонтные работы по замене зап. частей осуществляет Сервисная служба ГК Электропомпа.</p>
+      </div>
+      <div class="block-shift__img">
+        <img src="./public/img-examples/sklad.jpg" alt="Склад ГК Электропомпа">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block-shift-img block-left-img-shift block-shift-img__outer-title">
+  <div class="container">
+    <div class="block-shift__grid">
+      <h3 class="block-shift__title">О дистрибьюторе</h3>
+      <div class="block-shift__desc">
+        <p>Поддержание полного ассортимента товаров и зап частей в наличии на собственном складском комплексе площадью более 1500 м<sup>2</sup> позволяет комплектовать заказы любой сложности в самые короткие сроки.</p>
+        <p>Региональным покупателям бесплатно доставим товар до терминалов транспортноых компаний в г. Москве.</p>
+        <p>Услуги гарантийного и постгарантийного обслужвания, ремонтные работы по замене зап. частей осуществляет Сервисная служба ГК Электропомпа.</p>
+      </div>
+      <div class="block-shift__img">
+        <img src="./public/img-examples/sklad.jpg" alt="Склад ГК Электропомпа">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block-shift-img block-right-img-shift block-shift-img__inner-title">
+  <div class="container">
+    <div class="block-shift__grid">
+      <div class="block-shift__desc">
+        <h1 class="h3 block-shift__title">Сервисный центр</h1>
+        <p>По факту неисправности мембранного бака вы можете обратиться в наш Сервисный центр.</p>
+        <p>Мы выполняем сервисные работы по замене мембраны, фланца, покраске гидроаккумуляторов и т.д.</p>
+        <p>Вы всегда можете получить консультацию по вопросам гарантийного/пост гарантийного обслуживания, монтажа, эксплуатации оборудования, замене зап частей и т.д. у наших сервисных специалистов по тел. 8 800 100 00 77 в рабочее время.</p>
+      </div>
+      <div class="block-shift__img">
+        <img src="./public/img-examples/service.webp" alt="Сервисный цент Zilmet">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block-shift-img block-left-img-shift block-shift-img__inner-title">
+  <div class="container">
+    <div class="block-shift__grid">
+      <div class="block-shift__desc">
+        <h1 class="h3 block-shift__title">Сервисный центр</h1>
+        <p>По факту неисправности мембранного бака вы можете обратиться в наш Сервисный центр.</p>
+        <p>Мы выполняем сервисные работы по замене мембраны, фланца, покраске гидроаккумуляторов и т.д.</p>
+        <p>Вы всегда можете получить консультацию по вопросам гарантийного/пост гарантийного обслуживания, монтажа, эксплуатации оборудования, замене зап частей и т.д. у наших сервисных специалистов по тел. 8 800 100 00 77 в рабочее время.</p>
+      </div>
+      <div class="block-shift__img">
+        <img src="./public/img-examples/service.webp" alt="Сервисный цент Zilmet">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<script src="http://127.0.0.1:35729/livereload.js?ext=Chrome&amp;extver=2.1.0"></script></body><style id="igor_ext_nofollow">a[rel~='nofollow'],a[rel~='sponsored'],a[rel~='ugc']{outline:.14em dotted red !important;outline-offset:.2em;}a[rel~='nofollow'] img,a[rel~='sponsored'] img,a[rel~='ugc'] img{outline:2px dotted red !important;outline-offset:.2em;}</style></html>
