@@ -65,6 +65,15 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
       padding-left: calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
       padding-right: calc( map-get($grid-gutters, #{$breakpoint}) / 2 )
 
+@each $breakpoint, $width in $grid-breakpoints
+  @if $breakpoint != "xs"
+    .container-#{$breakpoint}
+      width: 100%
+      margin-right: auto
+      margin-left: auto
+      @media ( min-width: #{$width} )
+        max-width: map-get($container-max-widths, #{$breakpoint})
+
 .row
   display: -ms-flexbox
   display: flex
@@ -166,15 +175,13 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
 @each $breakpoint, $width in $grid-breakpoints
   @if $breakpoint != "xs"
 
-    @for $i from 1 through 11
-      .col-#{$breakpoint}-five
-        @media (min-width: #{$width})
-          display: block
-          width: calc( 100% / 5)
+    .col-#{$breakpoint}-five
+      @media (min-width: #{$width})
+        flex: 0 0 20%
+        max-width: 20%
 
   @else
     .col-five
-      @media (min-width: #{$width})
-        display: block
-        width: calc( 100% / 5)
+      flex: 0 0 20%
+      max-width: 20%
 
