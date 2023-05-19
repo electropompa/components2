@@ -46,10 +46,10 @@
     </div>
     <div class="col-12 col-xl-2">
       <h2 id="variables">Variables</h2>
-      <ul class="list-dots">
+      <ul>
         <li>Breakpoints</li>
         <li>Shadows
-          <ul class="list-dots">
+          <ul>
             <li>=shadow</li>
             <li>=shadowHover</li>
           </ul>
@@ -60,7 +60,7 @@
     </div>
     <div class="col-12 col-xl-3">
       <h2 id="theme-variables">Theme Variables</h2>
-      <ul class="list-dots">
+      <ul>
         <li>Theme colors ($accent)</li>
         <li>Theme fonts
           <ol>
@@ -109,7 +109,7 @@
     <div class="col-12 col-md-4">
       <p>Сетка отличается от Bootstrap, в первую очередь, тем, что от Breakpoins меняется Gutters</p>
       <p>Как и в Bootstrap, сетка на flexbox</p>
-      <ul class="list-dots">
+      <ul class="list-unstyled">
         <li>.no-gutters</li>
         <li>.g-0</li>
         <li>.col</li>
@@ -120,7 +120,7 @@
     </div>
     <div class="col-12 col-md-2">
       <h3>Breakpoints</h3>
-      <ul class="list-dots">
+      <ul class="list-unstyled">
         <li>$xs: 480px</li>
         <li>$sm: 576px</li>
         <li>$md: 768px</li>
@@ -131,7 +131,7 @@
     </div>
     <div class="col-12 col-md-2">
       <h3>Gutters</h3>
-      <ul class="list-dots">
+      <ul class="list-unstyled">
         <li>"xs": 20px</li>
         <li>"sm": 24px</li>
         <li>"md": 30px</li>
@@ -142,23 +142,23 @@
     </div>
     <div class="col-12 col-md-4">
       <h3>Размеры</h3>
-      <ul class="list-dots">
+      <ul class="list-unstyled">
         <li><b>$sm диапазон</b>: 576px - 767px</li>
         <li><b>$sm-container</b>: 552px = 528px - padding 12px * 2</li>
       </ul>
-      <ul class="list-dots">
+      <ul class="list-unstyled">
         <li><b>$md диапазон</b>: 768px - 1023px</li>
         <li><b>$md-container</b>: 708px = 738px - padding 15px * 2</li>
       </ul>
-      <ul class="list-dots">
+      <ul class="list-unstyled">
         <li><b>$lg диапазон</b>: 1024px - 1399px</li>
         <li><b>$lg-container</b>: 960px = 992px - padding 16px * 2</li>
       </ul>
-      <ul class="list-dots">
+      <ul class="list-unstyled">
         <li><b>$xl диапазон</b>: 1400px - 1499px</li>
         <li><b>$xl-container</b>: 1332px = 1366px - padding 17px * 2</li>
       </ul>
-      <ul class="list-dots">
+      <ul class="list-unstyled">
         <li><b>$xxl-container</b>: 1428px = 1464px - padding 18px * 2</li>
       </ul>
     </div>
@@ -270,7 +270,7 @@
   <h2 id="typography-utilities" class="my-5">Typography utilities</h2>
   <div class="row">
     <div class="col-12 col-md-2">
-      <ul class="list-dots">
+      <ul>
         <li>.fw-bold</li>
         <li>.nowrap</li>
         <li>small, .small</li>
@@ -278,14 +278,14 @@
       </ul>
     </div>
     <div class="col-12 col-md-3">
-      <ul class="list-dots">
+      <ul>
         <li>.uppercase - UPPERCASE</li>
         <li>.text-capitalize - Capitalize</li>
         <li>.text-lowercase - lowercase</li>
       </ul>
     </div>
     <div class="col-12 col-md-3">
-      <ul class="list-dots">
+      <ul>
         <li>.text-left (.text-*-left)</li>
         <li>.text-right (.text-*-right)</li>
         <li>.text-center (.text-*-center)</li>
@@ -309,7 +309,7 @@
   <h2 id="utilities" class="my-5">Utilities</h2>
   <div class="row">
     <div class="col-12 col-xl-4">
-      <ul class="list-dots">
+      <ul>
         <li>.white-bg-wrapper - padding 40/60 для больших блоков</li>
         <li class="bg-black">.bg-black</li>
         <li class="bg-white">.bg-white</li>
@@ -320,7 +320,7 @@
     <div class="col-12 col-xl-4">
       <h4>Стандартные Bootstrap отступы</h4>
       <p>.(m|p)[-(t|r|b|l|y|x)]-*</p>
-      <ul class="list-dots">
+      <ul>
         <li>.position-(static|relative|absolute|fixed|sticky)</li>
         <li>.hidden</li>
         <li>.rounded-2</li>
@@ -330,7 +330,7 @@
     </div>
     <div class="col-12 col-xl-4">
       <h4>Стандартные Bootstrap Displays</h4>
-      <ul class="list-dots">
+      <ul>
         <li>.d[-breakpoint]-block</li>
         <li>.d[-breakpoint]-inline-block</li>
         <li>.d[-breakpoint]-inline</li>
@@ -343,7 +343,7 @@
   <h3 class="my-3">Flexbox Utilities</h3>
   <div class="row">
     <div class="col-12 col-xl-2">
-      <ul class="list-dots">
+      <ul>
         <li>=flex-center</li>
         <li>=flex-row-sb</li>
         <li>=flex-row-sb-aic</li>
@@ -355,7 +355,7 @@
       </ul>
     </div>
     <div class="col-12 col-xl-2">
-      <ul class="list-dots">
+      <ul>
         <li>.justify-content-start</li>
         <li>.justify-content-end</li>
         <li>.justify-content-center</li>
@@ -364,7 +364,7 @@
       </ul>
     </div>
     <div class="col-12 col-xl-2">
-      <ul class="list-dots">
+      <ul>
         <li>.align-items-start</li>
         <li>.align-items-end</li>
         <li>.align-items-center</li>
@@ -373,7 +373,7 @@
       </ul>
     </div>
     <div class="col-12 col-xl-2">
-      <ul class="list-dots">
+      <ul>
         <li>.align-content-start</li>
         <li>.align-content-end</li>
         <li>.align-content-center</li>
@@ -383,7 +383,7 @@
       </ul>
     </div>
     <div class="col-12 col-xl-2">
-      <ul class="list-dots">
+      <ul>
         <li>.align-self-auto</li>
         <li>.align-self-start</li>
         <li>.align-self-end</li>
@@ -393,7 +393,7 @@
       </ul>
     </div>
     <div class="col-12 col-xl-2">
-      <ul class="list-dots">
+      <ul>
         <li>.align-baseline</li>
         <li>.align-top</li>
         <li>.align-middle</li>
