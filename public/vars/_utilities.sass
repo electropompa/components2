@@ -127,6 +127,9 @@ ul.list-inline
   flex-direction: row
   justify-content: space-between
 
+.flex-row-sb
+  +flex-row-sb
+
 =flex-row-sb-aic
   +flex-row-sb
   align-items: center
@@ -148,14 +151,31 @@ ul.list-inline
   flex-direction: row
   justify-content: flex-start
 
+.flex-row-start
+  +flex-row-start
+
+=flex-column-start
+  display: flex
+  flex-direction: column
+  justify-content: start
+
+.flex-column-start
+  +flex-column-start
+
 =flex-column-sb
   display: flex
   flex-direction: column
   justify-content: space-between
 
+.flex-column-sb
+  +flex-column-sb
+
 =flex-column-aic
   +flex-center
   flex-direction: column
+
+.flex-column-aic
+  +flex-column-aic
 
 // Flex выравнивание
 .justify-content-start
