@@ -1,8 +1,8 @@
-###RESET
+### RESET
 
 =reset-buttons
 
-###COLORS
+### COLORS
 Нужно изменить предустановленные цвета для темы в файле _colors.sass:
 
 - accent
