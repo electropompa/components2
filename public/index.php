@@ -344,14 +344,16 @@
   <div class="row">
     <div class="col-12 col-xl-2">
       <ul>
-        <li>=flex-center</li>
-        <li>=flex-row-sb</li>
-        <li>=flex-row-sb-aic</li>
-        <li>=flex-row-sa</li>
-        <li>=flex-row-sa-aic</li>
-        <li>=flex-row-start</li>
-        <li>=flex-column-sb</li>
-        <li>=flex-column-aic</li>
+        <li>.flex-center</li>
+        <li>.flex-row-sb</li>
+        <li>.flex-row-sb-aic</li>
+        <li>.flex-row-sa</li>
+        <li>.flex-row-sa-aic</li>
+        <li>.flex-row-start</li>
+        <li>.flex-column-start</li>
+        <li>.flex-column-end</li>
+        <li>.flex-column-sb</li>
+        <li>.flex-column-aic</li>
       </ul>
     </div>
     <div class="col-12 col-xl-2">
