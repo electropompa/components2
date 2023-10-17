@@ -421,6 +421,7 @@ require "templates/menu.php";
   </div>
 
   <h3 class="my-5">Tables</h3>
+  <h4 class="my-5">.table-bordered</h4>
   <table class="table-bordered">
     <thead>
     <tr>

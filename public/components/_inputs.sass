@@ -6,11 +6,11 @@ input
   width: 100%
 
   @extend .border
-  +transition( border-color )
+  +transition( border-color .3s )
 
   &:focus, &:active
     border-color: var(--gray-800)
-    +transition( border-color )
+    +transition( border-color .3s )
 
   &::placeholder
     color: var(--gray-400)
@@ -37,11 +37,11 @@ input
   .component__input
     color: var(--gray-400)
     border-color: var(--gray-800)
-    +transition( border-color )
+    +transition( border-color .3s )
 
     &:focus, &:active
       border-color: var(--gray-800)
-      +transition( border-color )
+      +transition( border-color .3s )
 
     &::placeholder
       color: var(--gray-800)

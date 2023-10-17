@@ -4828,11 +4828,11 @@ ul.list-inline li {
   position: relative;
   border-radius: 5px;
   background-color: var(--white);
-  transition: background 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: background 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 .articles-list__small .item:hover {
   background-color: #fffbeb;
-  transition: background 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: background 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 .articles-list__small .item__img {
   display: block;
@@ -4842,7 +4842,7 @@ ul.list-inline li {
 }
 .articles-list__small .item__category {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 150%;
@@ -5025,10 +5025,10 @@ h1 .badge, h2 .badge, h3 .badge, h4 .badge, h5 .badge, h6 .badge, .h1 .badge, .h
   border: 4px solid transparent;
   padding: 0.375em 0.75em;
   border-radius: 4px;
-  transition: background-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: background-color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 .btn:hover {
-  transition: background-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: background-color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 .btn.btn-primary-inverse {
   background: var(--white);
@@ -5046,7 +5046,7 @@ input {
   line-height: 150%;
   padding: 14px 16px;
   width: 100%;
-  transition: border-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: border-color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 @media (min-width: 1400px) {
   input {
@@ -5060,7 +5060,7 @@ input {
 }
 input:focus, input:active {
   border-color: var(--gray-800);
-  transition: border-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: border-color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 input::placeholder {
   color: var(--gray-400);
@@ -5097,11 +5097,11 @@ input::placeholder {
 .component__dark .component__input {
   color: var(--gray-400);
   border-color: var(--gray-800);
-  transition: border-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: border-color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 .component__dark .component__input:focus, .component__dark .component__input:active {
   border-color: var(--gray-800);
-  transition: border-color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: border-color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 .component__dark .component__input::placeholder {
   color: var(--gray-800);
@@ -5166,12 +5166,12 @@ table td {
 }
 table td a {
   color: var(--black);
-  transition: color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 table td a:hover {
   color: var(--accent);
   text-decoration: none;
-  transition: color 0.5s cubic-bezier(0.35, 0, 0, 1.01);
+  transition: color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 
 table th, table td {
@@ -5213,6 +5213,69 @@ table.table-bordered > :not(caption) > * > * {
   border-width: 0 1px;
   border-color: var(--gray-400);
   border-style: solid;
+}
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.link-underline::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #4b5563;
+  transition: 0.3s;
+}
+.link-underline:hover:after {
+  bottom: -3px;
+}
+
+.link-white-underline {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.link-white-underline::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #4b5563;
+  transition: 0.3s;
+}
+.link-white-underline:hover:after {
+  bottom: -3px;
+}
+.link-white-underline:after {
+  background: white;
+}
+
+.link-highlight {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #FEF5DF 0%, #FEF5DF 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  background-position: 0 111%;
+  padding: 2px 2px 0 0;
+  border-bottom-width: 2px;
+  border-block-end-style: solid;
+  border-bottom-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.35, 0, 0, 1.01);
+}
+.link-highlight:hover {
+  background-size: 100% 88%;
+  border-bottom-color: #f8cd5f;
 }
 
 html {
@@ -5273,7 +5336,7 @@ aside {
   font-weight: 500;
 }
 .color-block-wrapper.accent {
-  background: #004C95;
+  background: #FEF5DF;
   color: white;
   font-weight: 500;
 }
