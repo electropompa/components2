@@ -3940,6 +3940,7 @@ ul.list-inline li {
 .flex-center {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .flex-row-sb {
@@ -3996,6 +3997,7 @@ ul.list-inline li {
 .flex-column-aic {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -5262,7 +5264,7 @@ table.table-bordered > :not(caption) > * > * {
 
 .link-highlight {
   text-decoration: none;
-  background-image: linear-gradient(to bottom, #FEF5DF 0%, #FEF5DF 100%);
+  background-image: linear-gradient(to bottom, #c8e4ff 0%, #95cbff 100%);
   background-repeat: no-repeat;
   background-size: 100% 0;
   background-position: 0 111%;
@@ -5275,7 +5277,62 @@ table.table-bordered > :not(caption) > * > * {
 }
 .link-highlight:hover {
   background-size: 100% 88%;
-  border-bottom-color: #f8cd5f;
+  border-bottom-color: #004C95;
+}
+
+.c-download__link {
+  display: flex;
+  align-items: center;
+  color: #161D26;
+  background: #f3f4f6;
+  width: 283px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0, 1.01);
+}
+.c-download__link:hover {
+  text-decoration: none;
+  box-shadow: 0 9px 40px 0 rgba(22, 29, 38, 0.05);
+  transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0, 1.01);
+}
+.c-download__link:first-child {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .c-download__link:first-child {
+    margin-bottom: 0;
+  }
+}
+.c-download__link.white {
+  background: white;
+}
+.c-download__link .c-download__desc {
+  flex-grow: 1;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 600;
+  padding: 10px 15px 10px 20px;
+}
+@media (min-width: 1400px) {
+  .c-download__link .c-download__desc {
+    padding: 7px 15px 7px 20px;
+  }
+}
+.c-download__link .c-download__divider {
+  width: 1px;
+  background: #e5e7eb;
+  align-self: stretch;
+}
+.c-download__link .c-download__icon {
+  height: 100%;
+  padding: 15px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-download__link .c-download__icon img {
+  max-width: none;
+  width: 24px;
 }
 
 html {
@@ -5336,7 +5393,7 @@ aside {
   font-weight: 500;
 }
 .color-block-wrapper.accent {
-  background: #FEF5DF;
+  background: #004C95;
   color: white;
   font-weight: 500;
 }

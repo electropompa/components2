@@ -1,8 +1,6 @@
-$accent: #FEF5DF
-
 .link-highlight
   text-decoration: none
-  background-image: linear-gradient(to bottom, #FEF5DF 0%, #FEF5DF 100%)
+  background-image: linear-gradient(to bottom, lighten($accent, 60) 0%, lighten($accent, 50) 100%)
   background-repeat: no-repeat
   background-size: 100% 0
   background-position: 0 111%
@@ -15,5 +13,5 @@ $accent: #FEF5DF
 
   &:hover
     background-size: 100% 88%
-    border-bottom-color: #f8cd5f
+    border-bottom-color: $accent
 

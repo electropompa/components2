@@ -1,6 +1,6 @@
 <?php
 $page_options = [
-  'title' => 'Компоненты - UI',
+  'title' => 'Компоненты - Специи',
 ];
 
 require "templates/menu.php";
