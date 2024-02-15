@@ -41,6 +41,8 @@ ul.list-inline
 
 .w-100, .h-100
 
+.no-gutters, .g-0 -> .g[-(xs|sm|md|lg|xl|xxl)]-0
+
 .hidden
 
 .(m|p)[(t|r|b|l|y|x)]-(xs|sm|md|lg|xl|xxl)-(1|2|3|4|5)
