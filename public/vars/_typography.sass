@@ -325,10 +325,12 @@ ul:not([class])
       position: absolute
       width: 6px
       height: 6px
-      margin-top: .75rem
       display: inline-block
       left: 0
       background: url("img/icons/dots.svg") no-repeat
+      margin-top: .6rem
+      @media(min-width: $sm)
+        margin-top: .75rem
 
 li > ol,
 li > ul

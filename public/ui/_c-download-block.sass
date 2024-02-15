@@ -1,3 +1,7 @@
+// $black
+// $gray-200 - background
+// $gray-300 - divider
+
 .c-download__link
   display: flex
   align-items: center
@@ -6,12 +10,14 @@
   width: 283px
   border-radius: 2px
   text-decoration: none
-  +transition(box-shadow .3s)
+  border: 1px solid transparent
+  +transition(box-shadow .3s, border-color .3s)
 
   &:hover
+    border: 1px solid $gray-200
     text-decoration: none
     +shadow
-    +transition(box-shadow .3s)
+    +transition(box-shadow .3s, border-color .3s)
 
   &:first-child
     margin-bottom: 30px
@@ -20,6 +26,7 @@
 
   &.white
     background: white
+    border: none
 
   .c-download__desc
     flex-grow: 1
@@ -35,7 +42,7 @@
     background: $gray-200
     align-self: stretch
 
-  .c-download__icon 
+  .c-download__icon
     height: 100%
     padding: 15px 24px
     +flex-center
