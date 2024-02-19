@@ -2125,6 +2125,10 @@ li > ul {
   font-weight: bold;
 }
 
+.fst-italic {
+  font-style: italic;
+}
+
 .nowrap {
   white-space: nowrap;
   font-family: inherit;
@@ -3991,6 +3995,12 @@ ul.list-inline li {
   justify-content: flex-start;
 }
 
+.flex-row-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 .flex-column-start {
   display: flex;
   flex-direction: column;
@@ -5231,6 +5241,19 @@ table.table-bordered > :not(caption) > * > * {
   border-width: 0 1px;
   border-color: var(--gray-400);
   border-style: solid;
+}
+
+table.table-horizontal-bordered tr td, table.table-horizontal-bordered tr th {
+  padding: 0.3em 0.5em;
+}
+table.table-horizontal-bordered tr:not(:last-child) td, table.table-horizontal-bordered tr:not(:last-child) th {
+  border-bottom-width: 1px;
+  border-color: var(--gray-400);
+  border-style: solid;
+}
+
+table.table-striped tr:nth-child(odd) td, table.table-striped tr:nth-child(odd) th {
+  background-color: var(--gray-100);
 }
 
 .link-underline {

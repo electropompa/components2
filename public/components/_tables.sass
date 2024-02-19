@@ -53,3 +53,17 @@ table.table-bordered > :not(caption)
       border-color: var(--gray-400)
       border-style: solid
 
+table.table-horizontal-bordered
+  tr
+    td, th
+      padding: .3em .5em
+  tr:not(:last-child)
+    td, th
+      border-bottom-width: 1px
+      border-color: var(--gray-400)
+      border-style: solid
+
+table.table-striped
+  tr:nth-child(odd)
+    td, th
+      background-color: var(--gray-100)
