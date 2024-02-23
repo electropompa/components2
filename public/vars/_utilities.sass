@@ -180,6 +180,21 @@ ul.list-inline
 .flex-row-end
   +flex-row-end
 
+=flex-column-aic
+  +flex-center
+  flex-direction: column
+
+.flex-column-aic
+  +flex-column-aic
+
+=flex-column-sb
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.flex-column-sb
+  +flex-column-sb
+
 =flex-column-start
   display: flex
   flex-direction: column
@@ -196,21 +211,6 @@ ul.list-inline
 
 .flex-column-end
   +flex-column-end
-
-=flex-column-sb
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-
-.flex-column-sb
-  +flex-column-sb
-
-=flex-column-aic
-  +flex-center
-  flex-direction: column
-
-.flex-column-aic
-  +flex-column-aic
 
 // Flex выравнивание
 .justify-content-start
