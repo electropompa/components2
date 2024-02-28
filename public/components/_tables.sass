@@ -67,3 +67,21 @@ table.table-striped
   tr:nth-child(odd)
     td, th
       background-color: var(--gray-100)
+
+table.table-horizontal-bordered
+  tr
+    td, th
+      padding: 12px 20px
+  tr
+    td, th
+      border-bottom-width: 1px
+      border-color: var(--gray-400)
+      border-style: solid
+
+  tr:last-child td
+    border-bottom: none
+
+table.table-striped
+  tr:nth-child(odd)
+    td
+      background-color: var(--gray-100)
