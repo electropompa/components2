@@ -342,15 +342,17 @@ require "templates/menu.php";
     <div class="col-12 col-xl-2">
       <ul>
         <li>.flex-center</li>
+        <li>.flex-row-aic</li>
         <li>.flex-row-sb</li>
         <li>.flex-row-sb-aic</li>
         <li>.flex-row-sa</li>
         <li>.flex-row-sa-aic</li>
         <li>.flex-row-start</li>
+        <li>.flex-row-end</li>
+        <li>.flex-column-aic</li>
+        <li>.flex-column-sb</li>
         <li>.flex-column-start</li>
         <li>.flex-column-end</li>
-        <li>.flex-column-sb</li>
-        <li>.flex-column-aic</li>
       </ul>
     </div>
     <div class="col-12 col-xl-2">
@@ -455,6 +457,38 @@ require "templates/menu.php";
   </table>
 
   <table>
+    <thead>
+    <tr>
+      <th>Стрижка (мытье + укладка включены в стоимость)</th>
+      <th>Мастер</th>
+      <th>Топ-мастер</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Короткие (до 10см)</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    <tr>
+      <td>Средние (до 20см)</td>
+      <td>1700 руб.</td>
+      <td>1900 руб.</td>
+    </tr>
+    <tr>
+      <td>Длинные (до 40см)</td>
+      <td>2000 руб.</td>
+      <td>2200 руб.</td>
+    </tr>
+    <tr>
+      <td data-title="Стрижка кончиков волос одним срезом">Стрижка кончиков волос одним срезом</td>
+      <td>1500 руб.</td>
+      <td>1700 руб.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <table class="table-horizontal-bordered table-striped">
     <thead>
     <tr>
       <th>Стрижка (мытье + укладка включены в стоимость)</th>
