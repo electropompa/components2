@@ -78,10 +78,12 @@ table.table-horizontal-bordered
       border-color: var(--gray-400)
       border-style: solid
 
-  tr:last-child td
-    border-bottom: none
+  tbody tr:last-child
+    td, th
+      border-bottom: none
 
 table.table-striped
-  tr:nth-child(odd)
-    td
-      background-color: var(--gray-100)
+  tbody
+    tr:nth-child(odd)
+      td, th
+        background-color: var(--gray-100)
