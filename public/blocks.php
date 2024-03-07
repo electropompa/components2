@@ -20,11 +20,11 @@ require "templates/menu.php";
 <h1 class="text-center">Примеры блоков</h1>
 
 <h2 class="text-center my-5" id="block-shift">Block Shift</h2>
-<?php require "src/blocks/block-shift/block-img-shift.php"?>
+<?php require "templates/blocks/block-img-shift.php"?>
 
   <h2 class="text-center my-5" id="articles-list-small">Articles List Small</h2>
 <div class="container">
-<?php require "src/blocks/articles-list/articles-list.php"; ?>
+<?php require "templates/blocks/articles-list.php"; ?>
 </div>
 
 <?php require_once "templates/footer.php";
