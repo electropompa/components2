@@ -1,0 +1,62 @@
+@import '../src/styles'
+body
+  padding-top: 50px
+  background: $gray-100
+
+h1, h2, h3, h4, h5, h6
+  font:
+    family: $heading-font
+    weight: 400
+  color: var(--black)
+
+p
+  font:
+    family: $text-font
+    weight: 400
+  color: var(--black)
+
+// Для страницы
+nav
+  ul
+    li
+      +sm-text-medium
+      &:not(:last-child)
+        margin-right: 25px
+
+aside
+  position: fixed
+  left: 10px
+
+.color-block-wrapper
+  padding: 10px
+
+  &.black
+    background: var(--black)
+    color: white
+
+  &.white
+    background: $white
+    color: var(--black)
+    font-weight: 500
+
+  &.accent
+    background: $accent
+    color: $white
+    font-weight: 500
+
+.color-block-wrapper[class$="-600"],
+.color-block-wrapper[class$="-700"],
+.color-block-wrapper[class$="-800"],
+.color-block-wrapper[class$="-900"]
+  color: $white
+  font-weight: 500
+
+@each $name, $value in $colors
+  .#{$name}
+    background: #{$value}
+
+.alert
+  margin-bottom: 15px
+
+footer
+  padding: 25px 0
