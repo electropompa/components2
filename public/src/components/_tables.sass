@@ -1,3 +1,11 @@
+=table-padding
+  padding: 8px 5px
+  @media (min-width: $sm)
+    padding: 10px 15px
+  @media (min-width: $md)
+    padding: 12px 20px
+
+
 table
   width: 100%
   margin-bottom: 1.5em
@@ -40,7 +48,7 @@ table:not(.table-bordered, .table-horizontal-bordered)
     text-align: left
     vertical-align: middle
     background: white
-    padding: 12px 20px
+    +table-padding
 
 
 table.table-bordered > :not(caption)
@@ -67,3 +75,23 @@ table.table-striped
   tr:nth-child(odd)
     td, th
       background-color: var(--gray-100)
+
+table.table-horizontal-bordered
+  tr
+    td, th
+      +table-padding
+  tr
+    td, th
+      border-bottom-width: 1px
+      border-color: var(--gray-400)
+      border-style: solid
+
+  tbody tr:last-child
+    td, th
+      border-bottom: none
+
+table.table-striped
+  tbody
+    tr:nth-child(odd)
+      td, th
+        background-color: var(--gray-100)

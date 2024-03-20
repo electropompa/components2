@@ -12,7 +12,7 @@ let processors = [
     autoprefixer({ overrideBrowserslist:[ 'last 2 version' ]})
 ];
 
-const sassEntry = "public/vars/styles.sass";
+const sassEntry = "public/src/styles.sass";
 
 function styles(){
     return src( sassEntry )
@@ -33,8 +33,6 @@ const productionStyles = () => {
        .pipe( csso() )
        .pipe( dest( "public/" ) );
 }
-
-
 exports.productionStyles = productionStyles;
 
 function startWatch() {
@@ -44,3 +42,14 @@ function startWatch() {
     watch( ['./*/*.sass', './*/**/*.sass'], styles );
 }
 exports.default = startWatch;
+
+
+const exampleStyles = () => {
+    return src( "public/example/for-example-page.sass" )
+        .pipe( sass().on( 'error', sass.logError ) )
+        .pipe( postcss(processors) )
+        .pipe( gcmq() )
+        .pipe( csso() )
+        .pipe( dest( "public/" ) );
+}
+exports.exampleStyles = exampleStyles;
