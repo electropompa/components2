@@ -25,10 +25,12 @@
   @extend %button
   color: white
   background-color: transparent
-  border: 4px solid transparent
-  padding: .375em .75em
+  border: 2px solid transparent
   border-radius: 4px
+  padding: .5em .75em
   +transition(background-color .3s)
+  @media (min-width: $sm)
+    padding: .375em .75em
   &:hover
     +transition(background-color .3s)
 

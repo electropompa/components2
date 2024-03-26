@@ -180,21 +180,6 @@ ul.list-inline
 .flex-row-end
   +flex-row-end
 
-=flex-column-aic
-  +flex-center
-  flex-direction: column
-
-.flex-column-aic
-  +flex-column-aic
-
-=flex-column-sb
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-
-.flex-column-sb
-  +flex-column-sb
-
 =flex-column-start
   display: flex
   flex-direction: column
@@ -212,18 +197,42 @@ ul.list-inline
 .flex-column-end
   +flex-column-end
 
+=flex-column-aic
+  +flex-center
+  flex-direction: column
+
+.flex-column-aic
+  +flex-column-aic
+
+=flex-column-sb
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.flex-column-sb
+  +flex-column-sb
+
 // Flex выравнивание
-.justify-content-start
-  -ms-flex-pack: start !important
-  justify-content: flex-start !important
+$flex-alignment: ( "start", "center", "end" ) !default
 
-.justify-content-end
-  -ms-flex-pack: end !important
-  justify-content: flex-end !important
+@mixin flex-prefix( $prop, $val )
+  @if $val == "center"
+    #{$prop}: #{$val}!important
+  @else
+    #{$prop}: flex-#{$val}!important
 
-.justify-content-center
-  -ms-flex-pack: center !important
-  justify-content: center !important
+@each $breakpoint, $width in $grid-breakpoints
+  @each $align in $flex-alignment
+    @if $breakpoint != "xs"
+      .justify-content-#{$breakpoint}-#{$align}
+        @media (min-width: #{$width})
+          -ms-flex-pack: #{$align} !important
+          @include flex-prefix( 'justify-content', $align )
+
+    @else
+      .justify-content-#{$align}
+        -ms-flex-pack: #{$align} !important
+        @include flex-prefix( 'justify-content', $align )
 
 .justify-content-between
   -ms-flex-pack: justify !important
@@ -233,17 +242,19 @@ ul.list-inline
   -ms-flex-pack: distribute !important
   justify-content: space-around !important
 
-.align-items-start
-  -ms-flex-align: start !important
-  align-items: flex-start !important
+@each $breakpoint, $width in $grid-breakpoints
+  @each $align in $flex-alignment
+    @if $breakpoint != "xs"
+      .align-items-#{$breakpoint}-#{$align}
+        @media (min-width: #{$width})
+          -ms-flex-align: #{$align} !important
+          @include flex-prefix( 'align-items', $align )
 
-.align-items-end
-  -ms-flex-align: end !important
-  align-items: flex-end !important
+    @else
+      .align-items-#{$align}
+        -ms-flex-align: #{$align} !important
+        @include flex-prefix( 'align-items', $align )
 
-.align-items-center
-  -ms-flex-align: center !important
-  align-items: center !important
 
 .align-items-baseline
   -ms-flex-align: baseline !important
@@ -253,17 +264,18 @@ ul.list-inline
   -ms-flex-align: stretch !important
   align-items: stretch !important
 
-.align-content-start
-  -ms-flex-line-pack: start !important
-  align-content: flex-start !important
+@each $breakpoint, $width in $grid-breakpoints
+  @each $align in $flex-alignment
+    @if $breakpoint != "xs"
+      .align-content-#{$breakpoint}-#{$align}
+        @media (min-width: #{$width})
+          -ms-flex-line-pack: #{$align} !important
+          @include flex-prefix( 'align-content', $align )
 
-.align-content-end
-  -ms-flex-line-pack: end !important
-  align-content: flex-end !important
-
-.align-content-center
-  -ms-flex-line-pack: center !important
-  align-content: center !important
+    @else
+      .align-content-#{$align}
+        -ms-flex-line-pack: #{$align} !important
+        @include flex-prefix( 'align-content', $align )
 
 .align-content-between
   -ms-flex-line-pack: justify !important
@@ -348,8 +360,19 @@ $orders: ("first": -1, "0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "last": 6
       .order-#{$order}
         order: $orderval !important
 
-.w-100
-  width: 100%
+
+// WIDTH UTILITIES .w-sm-50
+$widthpercente: ('50', '80', '100') !default
+@each $breakpoint, $width in $grid-breakpoints
+  @if $breakpoint != "xs"
+    @each $blockwidth in $widthpercente
+      .w-#{$breakpoint}-#{$blockwidth}
+        @media (min-width: #{$width})
+          width: #{$blockwidth}px !important
+  @else
+    @each $blockwidth in $widthpercente
+      .w-#{$blockwidth}
+        width: #{$blockwidth}px !important
 
 .h-100
   height: 100%

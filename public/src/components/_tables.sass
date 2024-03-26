@@ -5,13 +5,12 @@
   @media (min-width: $md)
     padding: 12px 20px
 
-
 table
   width: 100%
   margin-bottom: 1.5em
   th, td
     color: var(--black)
-    padding: .5em
+    padding: 0 .5em
 
   th
     +sm-text-bold
@@ -26,21 +25,23 @@ table
         color: var(--accent)
         text-decoration: none
         +transition(color .3s)
- 
-table
-  th, td
+
+table.text-left
+  td, th
     text-align: left
 
-table:not(.table-bordered, .table-horizontal-bordered)
+table:not(.table-bordered, .table-horizontal-bordered, .table-striped)
   border-spacing: 0 10px
   border-collapse: separate
 
   th
     +sm-text-uppercase
+    text-align: left
     vertical-align: bottom
 
   th[scope="row"]
     background: white
+    text-align: left
     vertical-align: middle
     padding-left: 20px
 
@@ -49,7 +50,6 @@ table:not(.table-bordered, .table-horizontal-bordered)
     vertical-align: middle
     background: white
     +table-padding
-
 
 table.table-bordered > :not(caption)
   & > *
@@ -61,20 +61,12 @@ table.table-bordered > :not(caption)
       border-color: var(--gray-400)
       border-style: solid
 
-table.table-horizontal-bordered
-  tr
-    td, th
-      padding: .3em .5em
-  tr:not(:last-child)
-    td, th
-      border-bottom-width: 1px
-      border-color: var(--gray-400)
-      border-style: solid
+  td, th
+    padding: .3em .5em
 
-table.table-striped
-  tr:nth-child(odd)
-    td, th
-      background-color: var(--gray-100)
+td, th
+  &[rowspan]
+    vertical-align: middle
 
 table.table-horizontal-bordered
   tr
@@ -83,7 +75,7 @@ table.table-horizontal-bordered
   tr
     td, th
       border-bottom-width: 1px
-      border-color: var(--gray-400)
+      border-color: var(--gray-300)
       border-style: solid
 
   tbody tr:last-child
@@ -95,3 +87,4 @@ table.table-striped
     tr:nth-child(odd)
       td, th
         background-color: var(--gray-100)
+
