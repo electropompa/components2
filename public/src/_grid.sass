@@ -116,14 +116,16 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
 
   @else
 
-    .no-gutters, .g-0
-      margin-right: 0
-      margin-left: 0
+    .row
+      &.no-gutters,
+      &.g-0
+        margin-right: 0
+        margin-left: 0
 
-      > .col,
-      > [class*="col-"]
-        padding-right: 0
-        padding-left: 0
+        > .col,
+        > [class*="col-"]
+          padding-right: 0
+          padding-left: 0
 
 // offsets - ОТСТУПЫ
 @each $breakpoint, $width in $grid-breakpoints
@@ -135,7 +137,7 @@ $container-max-widths: ( "sm": $container-sm, "md": $container-md, "lg": $contai
 
     @for $i from 1 through 11
       .offset-#{$breakpoint}-#{$i}
-        @media (min-width: #{$width})
+        @media (min-width: #{$width})  
           margin-left: calc( $i * 100% / 12)
 
   @else

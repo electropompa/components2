@@ -1,13 +1,21 @@
 // INPUT нужно оборачивать в label
 
-input, select
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+select
   +sm-text-medium
   border: 1px solid var(--gray-400)
   width: 100%
   padding: 10px 16px
-  @media (min-width: $sm)
-    padding: 14px 16px
   +transition( border-color .3s)
+  @media (min-width: $sm)
+    padding: 15px 16px
+
   &:focus, &:active
     border-color: var(--gray-800)
     +transition( border-color .3s)

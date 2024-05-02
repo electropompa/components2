@@ -1073,13 +1073,13 @@ html {
   }
 }
 
-.no-gutters, .g-0 {
+.row.no-gutters, .row.g-0 {
   margin-right: 0;
   margin-left: 0;
 }
-.no-gutters > .col,
-.no-gutters > [class*=col-], .g-0 > .col,
-.g-0 > [class*=col-] {
+.row.no-gutters > .col,
+.row.no-gutters > [class*=col-], .row.g-0 > .col,
+.row.g-0 > [class*=col-] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -4769,104 +4769,104 @@ ul.list-inline li {
 }
 
 .w-50 {
-  width: 50px !important;
+  width: 50% !important;
 }
 
 .w-80 {
-  width: 80px !important;
+  width: 80% !important;
 }
 
 .w-100 {
-  width: 100px !important;
+  width: 100% !important;
 }
 
 @media (min-width: 576px) {
   .w-sm-50 {
-    width: 50px !important;
+    width: 50% !important;
   }
 }
 
 @media (min-width: 576px) {
   .w-sm-80 {
-    width: 80px !important;
+    width: 80% !important;
   }
 }
 
 @media (min-width: 576px) {
   .w-sm-100 {
-    width: 100px !important;
+    width: 100% !important;
   }
 }
 
 @media (min-width: 768px) {
   .w-md-50 {
-    width: 50px !important;
+    width: 50% !important;
   }
 }
 
 @media (min-width: 768px) {
   .w-md-80 {
-    width: 80px !important;
+    width: 80% !important;
   }
 }
 
 @media (min-width: 768px) {
   .w-md-100 {
-    width: 100px !important;
+    width: 100% !important;
   }
 }
 
 @media (min-width: 1024px) {
   .w-lg-50 {
-    width: 50px !important;
+    width: 50% !important;
   }
 }
 
 @media (min-width: 1024px) {
   .w-lg-80 {
-    width: 80px !important;
+    width: 80% !important;
   }
 }
 
 @media (min-width: 1024px) {
   .w-lg-100 {
-    width: 100px !important;
+    width: 100% !important;
   }
 }
 
 @media (min-width: 1400px) {
   .w-xl-50 {
-    width: 50px !important;
+    width: 50% !important;
   }
 }
 
 @media (min-width: 1400px) {
   .w-xl-80 {
-    width: 80px !important;
+    width: 80% !important;
   }
 }
 
 @media (min-width: 1400px) {
   .w-xl-100 {
-    width: 100px !important;
+    width: 100% !important;
   }
 }
 
 @media (min-width: 1500px) {
   .w-xxl-50 {
-    width: 50px !important;
+    width: 50% !important;
   }
 }
 
 @media (min-width: 1500px) {
   .w-xxl-80 {
-    width: 80px !important;
+    width: 80% !important;
   }
 }
 
 @media (min-width: 1500px) {
   .w-xxl-100 {
-    width: 100px !important;
+    width: 100% !important;
   }
 }
 
@@ -5140,7 +5140,14 @@ a.badge:hover {
   color: var(--white);
 }
 
-input, select {
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=url],
+select {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 150%;
@@ -5150,25 +5157,67 @@ input, select {
   transition: border-color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
 @media (min-width: 1400px) {
-  input, select {
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=url],
+  select {
     font-size: 1.4rem;
   }
 }
 @media (min-width: 1400px) {
-  input, select {
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=url],
+  select {
     line-height: 170%;
   }
 }
 @media (min-width: 576px) {
-  input, select {
-    padding: 14px 16px;
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  input[type=number],
+  input[type=password],
+  input[type=search],
+  input[type=url],
+  select {
+    padding: 15px 16px;
   }
 }
-input:focus, input:active, select:focus, select:active {
+input[type=text]:focus, input[type=text]:active,
+input[type=email]:focus,
+input[type=email]:active,
+input[type=tel]:focus,
+input[type=tel]:active,
+input[type=number]:focus,
+input[type=number]:active,
+input[type=password]:focus,
+input[type=password]:active,
+input[type=search]:focus,
+input[type=search]:active,
+input[type=url]:focus,
+input[type=url]:active,
+select:focus,
+select:active {
   border-color: var(--gray-800);
   transition: border-color 0.3s cubic-bezier(0.35, 0, 0, 1.01);
 }
-input::placeholder, select::placeholder {
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=tel]::placeholder,
+input[type=number]::placeholder,
+input[type=password]::placeholder,
+input[type=search]::placeholder,
+input[type=url]::placeholder,
+select::placeholder {
   color: var(--gray-400);
 }
 
