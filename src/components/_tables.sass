@@ -1,8 +1,12 @@
+@use "../functions"
+@use "../typography"
+@use "../vars"
+
 =table-padding
   padding: 8px 5px
-  @media (min-width: $sm)
+  @media (min-width: vars.$sm)
     padding: 10px 15px
-  @media (min-width: $md)
+  @media (min-width: vars.$md)
     padding: 12px 20px
 
 table
@@ -13,18 +17,18 @@ table
     padding: 0 .5em
 
   th
-    +sm-text-bold
+    +typography.sm-text-bold
   td
-    +sm-text-normal
+    +typography.sm-text-normal
     text-align: right
 
     a
       color: var(--black)
-      +transition(color .3s)
+      +functions.transition(color .3s)
       &:hover
         color: var(--accent)
         text-decoration: none
-        +transition(color .3s)
+        +functions.transition(color .3s)
 
 table.text-left
   td, th
@@ -35,7 +39,7 @@ table:not(.table-bordered, .table-horizontal-bordered, .table-striped)
   border-collapse: separate
 
   th
-    +sm-text-uppercase
+    +typography.sm-text-uppercase
     text-align: left
     vertical-align: bottom
 

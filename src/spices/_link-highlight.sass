@@ -1,6 +1,10 @@
+@use "sass:color"
+@use "../functions"
+@use "../vars"
+
 .link-highlight
   text-decoration: none
-  background-image: linear-gradient(to bottom, lighten($accent, 60) 0%, lighten($accent, 50) 100%)
+  background-image: linear-gradient(to bottom, color.adjust(vars.$accent, $lightness: 60%) 0%, color.adjust(vars.$accent, $lightness: 50%) 100%)
   background-repeat: no-repeat
   background-size: 100% 0
   background-position: 0 111%
@@ -9,9 +13,9 @@
   border-block-end-style: solid
   border-bottom-color: transparent
   cursor: pointer
-  +transition( all .3s)
+  +functions.transition( all .3s)
 
   &:hover
     background-size: 100% 88%
-    border-bottom-color: $accent
+    border-bottom-color: vars.$accent
 

@@ -1,15 +1,18 @@
+@use "vars"
+@use "typo-utilities"
+
 // 1. HEADING FONT
 // 2. TYPO SIZE - lg, md, sm, xs / normal, medium, bold, uppercase
 // 3. TYPOGRAPHY UTILITIES
 
 \:root, html
   font-size: 10px
-  @media(min-width: $xl)
+  @media(min-width: vars.$xl)
     font-size: 12px
 
 =ff-headings
   font:
-    family: $heading-font
+    family: vars.$heading-font
     style: normal
     weight: $medium-weight
 
@@ -22,7 +25,7 @@ $bold-weight: 600
 // XS - EXTRA SMALL
 =xs-text-size
   font-size: 1rem
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     font-size: 1rem
 
 =xs-text-light
@@ -37,7 +40,7 @@ $bold-weight: 600
   +xs-text-size
   font-weight: $normal-weight
   line-height: 170%
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     line-height: 150%
 
 .xs-text-normal
@@ -47,7 +50,7 @@ $bold-weight: 600
   +xs-text-size
   font-weight: $medium-weight
   line-height: 170%
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     line-height: 150%
 
 .xs-text-medium
@@ -57,7 +60,7 @@ $bold-weight: 600
   +xs-text-size
   font-weight: $bold-weight
   line-height: 170%
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     line-height: 150%
 
 .xs-text-bold
@@ -74,14 +77,14 @@ $bold-weight: 600
 // SM - SMALL
 =sm-text-size
   font-size: 1.2rem
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     font-size: 1.4rem
 
 =sm-text-light
   +sm-text-size
   font-weight: $light-weight
   line-height: 150%
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     line-height: 160%
 
 .sm-text-light
@@ -91,7 +94,7 @@ $bold-weight: 600
   +sm-text-size
   font-weight: $normal-weight
   line-height: 150%
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     line-height: 160%
 
 .sm-text-normal
@@ -101,7 +104,7 @@ $bold-weight: 600
   +sm-text-size
   font-weight: $medium-weight
   line-height: 150%
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     line-height: 170%
 
 .sm-text-medium
@@ -111,7 +114,7 @@ $bold-weight: 600
   +sm-text-size
   font-weight: $bold-weight
   line-height: 150%
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     line-height: 170%
 
 .sm-text-bold
@@ -128,14 +131,14 @@ $bold-weight: 600
 // MD - MIDDLE
 =md-text-size
   font-size: 1.4rem
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     font-size: 1.6rem
 
 =md-text-light
   +md-text-size
   font-weight: $light-weight
   line-height: 150%
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     line-height: 160%
 
 .md-text-light
@@ -176,16 +179,16 @@ $bold-weight: 600
 // LG - LARGE
 =lg-text-size
   font-size: 1.5rem
-  @media (min-width: $md)
+  @media (min-width: vars.$md)
     font-size: 1.6rem
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     font-size: 1.8rem
 
 =lg-text-light
   +lg-text-size
   font-weight: $light-weight
   line-height: 170%
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     line-height: 160%
 
 .lg-text-light
@@ -229,7 +232,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   letter-spacing: -.02em
   line-height: 1.2
   a
-    color: $accent
+    color: vars.$accent
     &:hover
       text-decoration: none
 
@@ -243,7 +246,7 @@ h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6
   letter-spacing: -0.03em
   margin-top: .5rem
   margin-bottom: .75em
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     font-size: 4.5rem
 h1, .h1
   +h1
@@ -252,7 +255,7 @@ h1, .h1
   +ff-headings
   font-size: calc(1.325rem + .9vw)
   letter-spacing: 0.015em
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     font-size: 3.5rem
     letter-spacing: -0.01em
 
@@ -263,7 +266,7 @@ h2, .h2
   +ff-headings
   font-size: calc(1.3rem + .6vw)
   letter-spacing: 0.01em
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     font-size: 2.75rem
     letter-spacing: -0.02em
 h3, .h3
@@ -273,7 +276,7 @@ h3, .h3
   +ff-headings
   font-size: calc(1.275rem + .3vw)
   letter-spacing: 0.015em
-  @media (min-width: $xl)
+  @media (min-width: vars.$xl)
     font-size: 2.25rem
     letter-spacing: -0.01em
 h4, .h4
@@ -310,7 +313,7 @@ ol
     margin-bottom: 1em
     line-height: 140%
     &::marker
-      color: $black
+      color: vars.$black
 
 ul:not([class])
   padding-left: 20px
@@ -329,7 +332,7 @@ ul:not([class])
       left: 0
       background: url("img/icons/dots.svg") no-repeat
       margin-top: .6rem
-      @media(min-width: $sm)
+      @media(min-width: vars.$sm)
         margin-top: .75rem
 
 li > ol,

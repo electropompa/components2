@@ -1,3 +1,8 @@
+@use "sass:map"
+@use "colors-tailwind"
+@use "grid"
+@use "vars"
+
 // Зависит от variables и grid
 
 // 1. BG, BD, LISTS
@@ -22,7 +27,7 @@
   background-color: var(--accent)
 
 .border-top
-  border-top: 1px solid $gray-500
+  border-top: 1px solid colors-tailwind.$gray-500
 
 ul.list-inline
   li
@@ -30,13 +35,13 @@ ul.list-inline
 
 // MARGIN & PADDING UTILITIES
 // Перебор всех Брейкоинтов
-@each $breakpoint, $width in $grid-breakpoints
+@each $breakpoint, $width in grid.$grid-breakpoints
 
   // для каждого создаем margin и padding
   @each $prop, $abbrev in (margin: m, padding: p)
 
     // для каждого берем размеры из массива в variables.sass
-    @each $size, $length in $spacers
+    @each $size, $length in vars.$spacers
 
       @if $breakpoint != "xs"
         @media ( min-width: #{$width} )
@@ -83,7 +88,7 @@ ul.list-inline
 .hidden
   visibility: hidden
 
-@each $breakpoint, $width in $grid-breakpoints
+@each $breakpoint, $width in grid.$grid-breakpoints
 
   @if $breakpoint != "xs"
     @media ( min-width: #{$width} )
@@ -221,7 +226,7 @@ $flex-alignment: ( "start", "center", "end" ) !default
   @else
     #{$prop}: flex-#{$val}!important
 
-@each $breakpoint, $width in $grid-breakpoints
+@each $breakpoint, $width in grid.$grid-breakpoints
   @each $align in $flex-alignment
     @if $breakpoint != "xs"
       .justify-content-#{$breakpoint}-#{$align}
@@ -242,7 +247,7 @@ $flex-alignment: ( "start", "center", "end" ) !default
   -ms-flex-pack: distribute !important
   justify-content: space-around !important
 
-@each $breakpoint, $width in $grid-breakpoints
+@each $breakpoint, $width in grid.$grid-breakpoints
   @each $align in $flex-alignment
     @if $breakpoint != "xs"
       .align-items-#{$breakpoint}-#{$align}
@@ -264,7 +269,7 @@ $flex-alignment: ( "start", "center", "end" ) !default
   -ms-flex-align: stretch !important
   align-items: stretch !important
 
-@each $breakpoint, $width in $grid-breakpoints
+@each $breakpoint, $width in grid.$grid-breakpoints
   @each $align in $flex-alignment
     @if $breakpoint != "xs"
       .align-content-#{$breakpoint}-#{$align}
@@ -339,7 +344,7 @@ $flex-alignment: ( "start", "center", "end" ) !default
 // Классы анимаций для Vue JS
 .fade-enter-active,
 .fade-leave-active
-  transition: opacity .5s $transition
+  transition: opacity .5s vars.$transition
 
 .fade-enter,
 .fade-leave-to
@@ -349,7 +354,7 @@ $flex-alignment: ( "start", "center", "end" ) !default
 $orders: ("first": -1, "0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "last": 6)
 
 // ORDERS
-@each $breakpoint, $width in $grid-breakpoints
+@each $breakpoint, $width in grid.$grid-breakpoints
   @if $breakpoint != "xs"
     @each $order, $orderval in $orders
       .order-#{$breakpoint}-#{$order}
@@ -363,7 +368,7 @@ $orders: ("first": -1, "0": 0, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "last": 6
 
 // WIDTH UTILITIES - .w-sm-50
 $widthpercente: ('50', '80', '100') !default
-@each $breakpoint, $width in $grid-breakpoints
+@each $breakpoint, $width in grid.$grid-breakpoints
   @if $breakpoint != "xs"
     @each $blockwidth in $widthpercente
       .w-#{$breakpoint}-#{$blockwidth}
@@ -378,30 +383,30 @@ $widthpercente: ('50', '80', '100') !default
   height: 100%
 
 .w-50__exclude-gutter
-  width: calc(50% - #{map-get($grid-gutters, xs)})
-  @media (min-width: $sm)
-    width: calc(50% - #{map-get($grid-gutters, sm)})
-  @media (min-width: $md)
-    width: calc(50% - #{map-get($grid-gutters, md)})
-  @media (min-width: $lg)
-    width: calc(50% - #{map-get($grid-gutters, lg)})
-  @media (min-width: $xl)
-    width: calc(50% - #{map-get($grid-gutters, xl)})
-  @media (min-width: $xxl)
-    width: calc(50% - #{map-get($grid-gutters, xxl)})
+  width: calc(50% - #{map.get(vars.$grid-gutters, xs)})
+  @media (min-width: vars.$sm)
+    width: calc(50% - #{map.get(vars.$grid-gutters, sm)})
+  @media (min-width: vars.$md)
+    width: calc(50% - #{map.get(vars.$grid-gutters, md)})
+  @media (min-width: vars.$lg)
+    width: calc(50% - #{map.get(vars.$grid-gutters, lg)})
+  @media (min-width: vars.$xl)
+    width: calc(50% - #{map.get(vars.$grid-gutters, xl)})
+  @media (min-width: vars.$xxl)
+    width: calc(50% - #{map.get(vars.$grid-gutters, xxl)})
 
 .w-50__include-gutter
-  width: calc(50% + #{map-get($grid-gutters, xs)})
-  @media (min-width: $sm)
-    width: calc(50% + #{map-get($grid-gutters, sm)})
-  @media (min-width: $md)
-    width: calc(50% + #{map-get($grid-gutters, md)})
-  @media (min-width: $lg)
-    width: calc(50% + #{map-get($grid-gutters, lg)})
-  @media (min-width: $xl)
-    width: calc(50% + #{map-get($grid-gutters, xl)})
-  @media (min-width: $xxl)
-    width: calc(50% + #{map-get($grid-gutters, xxl)})
+  width: calc(50% + #{map.get(vars.$grid-gutters, xs)})
+  @media (min-width: vars.$sm)
+    width: calc(50% + #{map.get(vars.$grid-gutters, sm)})
+  @media (min-width: vars.$md)
+    width: calc(50% + #{map.get(vars.$grid-gutters, md)})
+  @media (min-width: vars.$lg)
+    width: calc(50% + #{map.get(vars.$grid-gutters, lg)})
+  @media (min-width: vars.$xl)
+    width: calc(50% + #{map.get(vars.$grid-gutters, xl)})
+  @media (min-width: vars.$xxl)
+    width: calc(50% + #{map.get(vars.$grid-gutters, xxl)})
 
 .position-static
   position: static

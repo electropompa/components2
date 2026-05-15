@@ -12,7 +12,7 @@ let processors = [
     autoprefixer({ overrideBrowserslist:[ 'last 2 version' ]})
 ];
 
-const sassEntry = "public/src/styles.sass";
+const sassEntry = "src/styles.sass";
 
 function styles(){
     return src( sassEntry )

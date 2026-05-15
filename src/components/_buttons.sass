@@ -1,3 +1,8 @@
+@use "sass:color"
+@use "../functions"
+@use "../typography"
+@use "../vars"
+
 %button
   display: inline-block
   text-align: center
@@ -5,7 +10,7 @@
   user-select: none
   text-decoration: none
   cursor: pointer
-  +md-text-medium
+  +typography.md-text-medium
 
   &:hover
     text-decoration: none
@@ -15,11 +20,11 @@
 
 =bgAndShadow( $color )
   background: $color
-  box-shadow: 0 1px 3px transparentize( lighten( $color, 10 ), 0.88 ), 0 1px 2px transparentize( lighten( $color, 10 ), 0.66 )
+  box-shadow: 0 1px 3px color.adjust( color.adjust( $color, $lightness: 10 ), $alpha: -0.88 ), 0 1px 2px color.adjust( color.adjust( $color, $lightness: 10 ), $alpha: -0.66 )
 
 =bgAndShadowHover( $color )
-  background: lighten( $color, 10 )
-  box-shadow: 0 3px 6px transparentize($color, 0.88 ), 0 3px 6px transparentize( $color, 0.66 )
+  background: color.adjust( $color, $lightness: 10 )
+  box-shadow: 0 3px 6px color.adjust($color, $alpha: -0.88 ), 0 3px 6px color.adjust( $color, $alpha: -0.66 )
 
 .btn
   @extend %button
@@ -28,11 +33,11 @@
   border: 2px solid transparent
   border-radius: 4px
   padding: .5em .75em
-  +transition(background-color .3s)
-  @media (min-width: $sm)
+  +functions.transition(background-color .3s)
+  @media (min-width: vars.$sm)
     padding: .375em .75em
   &:hover
-    +transition(background-color .3s)
+    +functions.transition(background-color .3s)
 
   &.btn-primary-inverse
     background: var(--white)

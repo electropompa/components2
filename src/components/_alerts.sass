@@ -1,0 +1,58 @@
+@use "../colors-tailwind"
+@use "../typography"
+@use "../vars"
+
+.alert
+  position: relative
+  border: 1px solid transparent
+  border-radius: 6px
+  +typography.md-text-bold
+  padding: 8px 12px
+  @media (min-width: vars.$sm)
+    padding: 10px 18px
+  @media (min-width: vars.$xl)
+    padding: 16px 24px
+
+.alert-primary
+  background-color: colors-tailwind.$sky-200
+  border-color: colors-tailwind.$sky-300
+  color: colors-tailwind.$blue-900
+
+.alert-secondary
+  background-color: colors-tailwind.$gray-200
+  border-color: colors-tailwind.$gray-300
+  color: colors-tailwind.$gray-900
+
+.alert-success
+  background-color: colors-tailwind.$emerald-200
+  border-color: colors-tailwind.$green-300
+  color: colors-tailwind.$green-900
+
+.alert-danger
+  background-color: colors-tailwind.$rose-200
+  border-color: colors-tailwind.$rose-400
+  color: colors-tailwind.$rose-900
+
+.alert-warning
+  background-color: colors-tailwind.$amber-100
+  border-color: colors-tailwind.$amber-400
+  color: colors-tailwind.$amber-900
+
+.alert-info
+  background-color: colors-tailwind.$cyan-200
+  border-color: colors-tailwind.$cyan-300
+  color: colors-tailwind.$cyan-900
+
+.alert-light
+  background-color: colors-tailwind.$gray-100
+  border-color: colors-tailwind.$gray-200
+  color: colors-tailwind.$gray-500
+
+.alert-dark
+  background-color: colors-tailwind.$slate-400
+  border-color: colors-tailwind.$slate-600
+  color: colors-tailwind.$slate-900
+
+
+
+

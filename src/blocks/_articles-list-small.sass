@@ -1,3 +1,8 @@
+@use "../colors-tailwind"
+@use "../functions"
+@use "../typography"
+@use "../utilities"
+
 .articles-list__small
   position: relative
   display: grid
@@ -12,16 +17,16 @@
     text-decoration: none
 
   .item
-    +flex-column-start
+    +utilities.flex-column-start
     padding: 30px 25px
     position: relative
     border-radius: 5px
     background-color: var(--white)
-    +transition( background .3s )
+    +functions.transition( background .3s )
 
     &:hover
-      background-color: $amber-50
-      +transition( background .3s )
+      background-color: colors-tailwind.$amber-50
+      +functions.transition( background .3s )
 
   .item__img
     display: block
@@ -32,8 +37,8 @@
   .item__category
     display: block
     margin-bottom: 10px
-    +sm-text-medium
-    color: $slate-300
+    +typography.sm-text-medium
+    color: colors-tailwind.$slate-300
 
   .item__title
-    +sm-text-normal
+    +typography.sm-text-normal
