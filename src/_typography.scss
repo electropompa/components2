@@ -1,0 +1,434 @@
+@use "vars" as *;
+@use "typo-utilities";
+
+// 1. HEADING FONT
+// 2. TYPO SIZE - lg, md, sm, xs / normal, medium, bold, uppercase
+// 3. TYPOGRAPHY UTILITIES
+
+:root, html {
+  font-size: 10px;
+  @media(min-width: $xl) {
+    font-size: 12px;
+  }
+}
+
+@mixin ff-headings {
+  font: {
+    family: $heading-font;
+    style: normal;
+    weight: $medium-weight;
+  }
+}
+
+$light-weight: 200;
+$normal-weight: 400;
+$medium-weight: 500;
+$bold-weight: 600;
+
+// РАЗМЕРЫ ТЕКСТА
+// XS - EXTRA SMALL
+@mixin xs-text-size {
+  font-size: 1rem;
+  @media (min-width: $xl) {
+    font-size: 1rem;
+  }
+}
+
+@mixin xs-text-light {
+  @include xs-text-size;
+  font-weight: $light-weight;
+  line-height: 170%;
+}
+
+.xs-text-light {
+  @include xs-text-light;
+}
+
+@mixin xs-text-normal {
+  @include xs-text-size;
+  font-weight: $normal-weight;
+  line-height: 170%;
+  @media (min-width: $xl) {
+    line-height: 150%;
+  }
+}
+
+.xs-text-normal {
+  @include xs-text-normal;
+}
+
+@mixin xs-text-medium {
+  @include xs-text-size;
+  font-weight: $medium-weight;
+  line-height: 170%;
+  @media (min-width: $xl) {
+    line-height: 150%;
+  }
+}
+
+.xs-text-medium {
+  @include xs-text-medium;
+}
+
+@mixin xs-text-bold {
+  @include xs-text-size;
+  font-weight: $bold-weight;
+  line-height: 170%;
+  @media (min-width: $xl) {
+    line-height: 150%;
+  }
+}
+
+.xs-text-bold {
+  @include xs-text-bold;
+}
+
+@mixin xs-text-uppercase {
+  @include xs-text-size;
+  @extend .uppercase;
+  line-height: 170%;
+}
+
+.xs-text-uppercase {
+  @include xs-text-uppercase;
+}
+
+// SM - SMALL
+@mixin sm-text-size {
+  font-size: 1.2rem;
+  @media (min-width: $xl) {
+    font-size: 1.4rem;
+  }
+}
+
+@mixin sm-text-light {
+  @include sm-text-size;
+  font-weight: $light-weight;
+  line-height: 150%;
+  @media (min-width: $xl) {
+    line-height: 160%;
+  }
+}
+
+.sm-text-light {
+  @include sm-text-light;
+}
+
+@mixin sm-text-normal {
+  @include sm-text-size;
+  font-weight: $normal-weight;
+  line-height: 150%;
+  @media (min-width: $xl) {
+    line-height: 160%;
+  }
+}
+
+.sm-text-normal {
+  @include sm-text-normal;
+}
+
+@mixin sm-text-medium {
+  @include sm-text-size;
+  font-weight: $medium-weight;
+  line-height: 150%;
+  @media (min-width: $xl) {
+    line-height: 170%;
+  }
+}
+
+.sm-text-medium {
+  @include sm-text-medium;
+}
+
+@mixin sm-text-bold {
+  @include sm-text-size;
+  font-weight: $bold-weight;
+  line-height: 150%;
+  @media (min-width: $xl) {
+    line-height: 170%;
+  }
+}
+
+.sm-text-bold {
+  @include sm-text-bold;
+}
+
+@mixin sm-text-uppercase {
+  @include sm-text-size;
+  @extend .uppercase;
+  line-height: 170%;
+}
+
+.sm-text-uppercase {
+  @include sm-text-uppercase;
+}
+
+// MD - MIDDLE
+@mixin md-text-size {
+  font-size: 1.4rem;
+  @media (min-width: $xl) {
+    font-size: 1.6rem;
+  }
+}
+
+@mixin md-text-light {
+  @include md-text-size;
+  font-weight: $light-weight;
+  line-height: 150%;
+  @media (min-width: $xl) {
+    line-height: 160%;
+  }
+}
+
+.md-text-light {
+  @include md-text-light;
+}
+
+@mixin md-text-normal {
+  @include md-text-size;
+  font-weight: $normal-weight;
+  line-height: 150%;
+}
+
+.md-text-normal {
+  @include md-text-normal;
+}
+
+@mixin md-text-medium {
+  @include md-text-size;
+  font-weight: $medium-weight;
+  line-height: 150%;
+}
+
+.md-text-medium {
+  @include md-text-medium;
+}
+
+@mixin md-text-bold {
+  @include md-text-size;
+  font-weight: $bold-weight;
+  line-height: 150%;
+}
+
+.md-text-bold {
+  @include md-text-bold;
+}
+
+@mixin md-text-uppercase {
+  @include md-text-size;
+  @extend .uppercase;
+  line-height: 170%;
+}
+
+.md-text-uppercase {
+  @include md-text-uppercase;
+}
+
+// LG - LARGE
+@mixin lg-text-size {
+  font-size: 1.5rem;
+  @media (min-width: $md) {
+    font-size: 1.6rem;
+  }
+  @media (min-width: $xl) {
+    font-size: 1.8rem;
+  }
+}
+
+@mixin lg-text-light {
+  @include lg-text-size;
+  font-weight: $light-weight;
+  line-height: 170%;
+  @media (min-width: $xl) {
+    line-height: 160%;
+  }
+}
+
+.lg-text-light {
+  @include lg-text-light;
+}
+
+@mixin lg-text-normal {
+  @include lg-text-size;
+  font-weight: $normal-weight;
+  line-height: 130%;
+}
+
+.lg-text-normal {
+  @include lg-text-normal;
+}
+
+@mixin lg-text-medium {
+  @include lg-text-size;
+  font-weight: $medium-weight;
+  line-height: 130%;
+}
+
+.lg-text-medium {
+  @include lg-text-medium;
+}
+
+@mixin lg-text-bold {
+  @include lg-text-size;
+  font-weight: $bold-weight;
+  line-height: 130%;
+}
+
+.lg-text-bold {
+  @include lg-text-bold;
+}
+
+@mixin lg-text-uppercase {
+  @include lg-text-size;
+  @extend .uppercase;
+  line-height: 170%;
+}
+
+.lg-text-uppercase {
+  @include lg-text-uppercase;
+}
+
+// РАЗМЕРЫ ЗАГОЛОВКОВ
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  @include ff-headings;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  a {
+    color: $accent;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+
+@mixin h1 {
+  @include ff-headings;
+  font-size: calc(1.375rem + 1.5vw);
+  letter-spacing: -0.03em;
+  margin-top: .5rem;
+  margin-bottom: .75em;
+  @media (min-width: $xl) {
+    font-size: 4.5rem;
+  }
+}
+h1, .h1 {
+  @include h1;
+}
+
+@mixin h2 {
+  @include ff-headings;
+  font-size: calc(1.325rem + .9vw);
+  letter-spacing: 0.015em;
+  @media (min-width: $xl) {
+    font-size: 3.5rem;
+    letter-spacing: -0.01em;
+  }
+}
+
+h2, .h2 {
+  @include h2;
+}
+
+@mixin h3 {
+  @include ff-headings;
+  font-size: calc(1.3rem + .6vw);
+  letter-spacing: 0.01em;
+  @media (min-width: $xl) {
+    font-size: 2.75rem;
+    letter-spacing: -0.02em;
+  }
+}
+h3, .h3 {
+  @include h3;
+}
+
+@mixin h4 {
+  @include ff-headings;
+  font-size: calc(1.275rem + .3vw);
+  letter-spacing: 0.015em;
+  @media (min-width: $xl) {
+    font-size: 2.25rem;
+    letter-spacing: -0.01em;
+  }
+}
+h4, .h4 {
+  @include h4;
+}
+
+@mixin h5 {
+  @include ff-headings;
+  font-size: 2rem;
+  letter-spacing: 0.015em;
+}
+h5, .h5 {
+  @include h5;
+}
+
+@mixin h6 {
+  @include ff-headings;
+  font-size: 1.75rem;
+  letter-spacing: 0.015em;
+}
+
+h6, .h6 {
+  @include h6;
+}
+
+p {
+  margin-bottom: 1.4em;
+}
+
+p, div {
+  @include md-text-normal;
+}
+
+// СПИСКИ
+ul, ol {
+  margin-bottom: 1.5em;
+}
+
+ol {
+  margin-left: 25px;
+  li {
+    margin-bottom: 1em;
+    line-height: 140%;
+    &::marker {
+      color: $black;
+    }
+  }
+}
+
+ul:not([class]) {
+  padding-left: 20px;
+  position: relative;
+
+  & > li {
+    @include md-text-normal;
+    margin-bottom: .5rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      left: 0;
+      background: url("img/icons/dots.svg") no-repeat;
+      margin-top: .6rem;
+      @media(min-width: $sm) {
+        margin-top: .75rem;
+      }
+    }
+  }
+}
+
+li > ol,
+li > ul {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}

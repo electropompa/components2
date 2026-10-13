@@ -1,0 +1,22 @@
+@use "sass:color";
+@use "../functions";
+@use "../vars";
+
+.link-highlight {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, color.adjust(vars.$accent, $lightness: 60%) 0%, color.adjust(vars.$accent, $lightness: 50%) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  background-position: 0 111%;
+  padding: 2px 2px 0 0;
+  border-bottom-width: 2px;
+  border-block-end-style: solid;
+  border-bottom-color: transparent;
+  cursor: pointer;
+  @include functions.transition( all .3s);
+
+  &:hover {
+    background-size: 100% 88%;
+    border-bottom-color: vars.$accent;
+  }
+}

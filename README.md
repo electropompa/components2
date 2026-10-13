@@ -80,3 +80,10 @@ ul.list-inline
 .fade opacity .5s $transition
 
 .w-50__(exclude|include)-gutter
+
+
+### СБОРКА (Vite + SCSS)
+
+- `npm install` — установка зависимостей
+- `npm run dev` — dev-сервер Vite со стилями из `src/styles.scss`
+- `npm run build` — сборка `public/styles.css` и `public/for-example-page.css`

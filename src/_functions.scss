@@ -1,0 +1,5 @@
+@use "vars";
+
+@mixin transition( $property... ) {
+  transition: $property vars.$transition;
+}

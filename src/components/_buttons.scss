@@ -1,0 +1,62 @@
+@use "sass:color";
+@use "../functions";
+@use "../typography";
+@use "../vars";
+
+%button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+  @include typography.md-text-medium;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin bgAndShadow( $color ) {
+  background: $color;
+  box-shadow: 0 1px 3px color.adjust( color.adjust( $color, $lightness: 10 ), $alpha: -0.88 ), 0 1px 2px color.adjust( color.adjust( $color, $lightness: 10 ), $alpha: -0.66 );
+}
+
+@mixin bgAndShadowHover( $color ) {
+  background: color.adjust( $color, $lightness: 10 );
+  box-shadow: 0 3px 6px color.adjust($color, $alpha: -0.88 ), 0 3px 6px color.adjust( $color, $alpha: -0.66 );
+}
+
+.btn {
+  @extend %button;
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: .5em .75em;
+  @include functions.transition(background-color .3s);
+  @media (min-width: vars.$sm) {
+    padding: .375em .75em;
+  }
+  &:hover {
+    @include functions.transition(background-color .3s);
+  }
+
+  &.btn-primary-inverse {
+    background: var(--white);
+    border: 2px solid var(--blue-600);
+    color: var(--blue-600);
+    &:hover {
+      background-color: var(--blue-600);
+      color: var(--white);
+    }
+  }
+}
+
+.btn-blue-rounded {
+  @extend %button;
+}

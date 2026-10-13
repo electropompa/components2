@@ -1,0 +1,27 @@
+@use "../colors-tailwind";
+@use "../functions";
+@use "../reset";
+
+// $blue-100
+// $blue-300
+
+.product-card__desc__read_more {
+  button, a {
+    @include reset.reset-buttons;
+    background: colors-tailwind.$blue-100;
+    padding: 7px 14px;
+    border-radius: 2px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    min-height: 37px;
+    @include functions.transition( background-color .3s);
+  }
+}
+
+.product-card__desc__read_more:hover button {
+  background-color: colors-tailwind.$blue-300;
+  @include functions.transition( background-color .3s);
+}

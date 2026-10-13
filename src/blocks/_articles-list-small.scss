@@ -1,0 +1,51 @@
+@use "../colors-tailwind";
+@use "../functions";
+@use "../typography";
+@use "../utilities";
+
+.articles-list__small {
+  position: relative;
+  display: grid;
+  --minmax: 230px;
+  --gap: 0;
+  grid-template-columns: repeat(auto-fit, minmax(var(--minmax),1fr));
+  gap: var(--gap);
+  margin-left: -25px;
+  margin-right: -25px;
+
+  .item__link {
+    text-decoration: none;
+  }
+
+  .item {
+    @include utilities.flex-column-start;
+    padding: 30px 25px;
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--white);
+    @include functions.transition( background .3s );
+
+    &:hover {
+      background-color: colors-tailwind.$amber-50;
+      @include functions.transition( background .3s );
+    }
+  }
+
+  .item__img {
+    display: block;
+    line-height: 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+
+  .item__category {
+    display: block;
+    margin-bottom: 10px;
+    @include typography.sm-text-medium;
+    color: colors-tailwind.$slate-300;
+  }
+
+  .item__title {
+    @include typography.sm-text-normal;
+  }
+}
